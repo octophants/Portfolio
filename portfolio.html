@@ -26,14 +26,6 @@ body{
 }
 
 
-
-.screentext{
-font-family: LeagueSpartan, sans-serif;
-font-size: 2.2em;
-letter-spacing: 1px;
-color: rgba(255,255,255,0.85);
-}
-
 #topnavlinks{
 	width: 100%;
 	padding:0;
@@ -50,11 +42,21 @@ color: rgba(255,255,255,0.85);
 }
 
 #worklink{
+	text-align: right;
   position: absolute;
   top: 0;
   right: 0;
   padding-top: 20px;
   padding-right: 20px;
+  height: 22px;
+  overflow: hidden;
+  -webkit-transition: height 0.2s linear;
+  -moz-transition: height 0.2s linear;
+  transition: height 0.2s linear;
+}
+
+#worklink.dropmenu{
+height: 200px;
 }
 
 #splashtext{
@@ -62,11 +64,11 @@ color: rgba(255,255,255,0.85);
 	color: #D43DAC;
 	width: 100%;
 	text-align: center;
-	font-size: 12vw;
+	font-size: 120px;
 	padding-top: 15%;
 	padding-bottom: 10%;
-	-webkit-text-stroke: 2px rgba(0,0,0,0);
-	text-shadow: 10px 7px 0 rgba(0,0,0,0.1);
+/*	-webkit-text-stroke: 2px rgba(0,0,0,0);
+	text-shadow: 10px 7px 0 rgba(0,0,0,0.1);*/
 }
 #numbersnav{
 	font-family: LeagueSpartan, sans-serif;
@@ -86,7 +88,7 @@ color: rgba(255,255,255,0.85);
 	height: 80vh;
 	margin-top: 5%;
 	position: absolute;
-	font-size: 20px;
+	font-size: 16px;
 	color: #ffffff;
 	margin-left: 5%;
 	margin-right: 5%;
@@ -104,6 +106,25 @@ transition: all .2s ease .2s;
   opacity: 1;
 }
 
+#workmenu{
+	text-align: right;
+	font-size: 16px;
+}
+
+#workmenu1, #workmenu2, #workmenu3{
+float: right;
+width: 15vw;
+margin-left: 5vw;
+background-color: transparent;
+}
+
+.underlined{
+border-bottom: 2px solid #000;
+padding-top: 10px; 
+margin-bottom: 10px;
+}
+
+
 </style>
 
 </head>
@@ -111,9 +132,14 @@ transition: all .2s ease .2s;
 
 <div id="topnavlinks">
 <div id="aboutlink" href="">
-about</div>
-<div id="worklink" href="">
-work
+hello</div>
+<div id="worklink">
+<span id="clickwork">work</span>
+<div id="workmenu">
+<div id="workmenu1"><div class="underlined">visual</div>example<br>example</div>
+<div id="workmenu2"><div class="underlined">ux / ui</div>example<br>example</div>
+<div id="workmenu3"><div class="underlined">design + tech</div>example<br>example</div>
+</div>	
 </div>
 <div id="aboutbox">
 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
@@ -123,12 +149,17 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 </div>
 </div>
 <div id="splashtext">
-SAM MADHU
+Sam Madhu
 </div>
 <script>
 jQuery(function ($) {
     $('#aboutlink').click(function () {
         $('#aboutbox').toggleClass('hide')
+    })
+})
+jQuery(function ($) {
+    $('#clickwork').click(function () {
+        $('#worklink').toggleClass('dropmenu')
     })
 })
 </script>
