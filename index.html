@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sam Madhu</title>
+  <script language="javascript" type="text/javascript" src="scripts/p5.js"></script>
+  <script language="javascript" type="text/javascript" src="scripts/sketch2.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script language="javascript" type="text/javascript" src="scripts/typer.js"></script>
+  <link rel="stylesheet" type="text/css" href="scripts/jquery.fullPage.css" />
+  <script type="text/javascript" src="scripts/jquery.fullPage.js"></script>
+  <script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+
+			});
+		});
+	</script>
+  <style> 
+
+  @font-face {
+    font-family: BigJohn;
+    src: url(fonts/BIGJOHN.otf);
+}
+
+@font-face {
+    font-family: SlimJoe;
+    src: url(fonts/SlimJoe.otf);
+}
+
+@font-face {
+    font-family: LeagueSpartan;
+    src: url(fonts/LeagueSpartan-Bold.otf);
+}
+
+  body{
+  	padding: 0;
+  	margin: 0;
+  	width: 100%;
+  	background-color: rgb(20,20,20);
+  	cursor: crosshair;
+    font-family: 'LeagueSpartan', Arial, sans-serif;
+  }
+
+::-moz-selection { /* Code for Firefox */
+    color: #000000;
+    background-color: rgba(204,70,200,0.99);
+}
+
+::selection {
+    color: #000000; 
+    background-color: rgba(204,70,200,0.99);
+}
+
+  #container{
+  	width: 100%;
+  }
+
+  #sphereCanvas{
+  	width: 100%;
+  	height: 100vh;
+  	text-align: center;
+  	background-color: rgb(204,70,200);
+    z-index: 0;
+  }
+
+  #splashtext{
+  width: 100%;
+  font-family: 'BigJohn', Arial, sans-serif;
+  font-size: 72px;
+  line-height: 50px;
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  color: rgb(220,220,220);
+  top: 48%;
+  letter-spacing: 15px;
+  mix-blend-mode: overlay;
+  }
+
+  .thintext{
+    font-family: 'SlimJoe', Arial, sans-serif;
+    font-size: 36px;
+    letter-spacing: 10px;
+    color: rgb(220,220,220);
+      }
+
+
+#topbar{
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  z-index: 2;
+  color: #ffffff;
+  font-family: 'SlimJoe', Arial, sans-serif;
+  letter-spacing: 4px;
+  font-size: 16px;
+}
+
+.worktext{
+  text-align: left;
+  padding-left: 30px;
+  float: left;
+  padding-top: 20px;
+  opacity: 0.7;
+}
+
+.contacttext{
+  text-align: right;
+  padding-right: 30px;
+  float: right;
+  padding-top: 20px;
+  opacity: 0.7;
+}
+
+#downarrow{
+  font-family: Arial;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  font-size: 100px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  mix-blend-mode: overlay;
+  z-index: 2;
+  bottom: 0;
+  opacity: 0.8;
+}
+
+#categories{
+  width: 100%;
+  font-family: 'SlimJoe', Arial, sans-serif;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: #ffffff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#workcontainer{
+  width: 100%;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#workpiece{
+  width: 30vw;
+  height: 35vh;
+  margin: 1vw;
+  background-color: yellow;
+  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+  filter: grayscale(100%);
+  float: left;
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+#workpiece:hover{
+  box-shadow: 10px 10px 0 rgb(204,70,200);
+  -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.pink{
+  color: rgb(204,70,200);
+}
+
+#about{
+  width: 100%;
+  font-family: 'BigJohn', Arial, sans-serif;
+  color: rgb(200,200,200);
+  font-size: 32px;
+
+}
+
+.abouttext{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.social{
+  font-family: 'SlimJoe', Arial, sans-serif;
+  font-size: 24px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+  </style>
+</head>
+
+<body>
+<div id="container">
+<div id="topbar">
+
+<div class="worktext">work</div>
+<div class="contacttext">contact</div>
+
+</div>
+<div id="fullpage">
+	<div class="section">
+    <div id="splashtext"> Sam Madhu<br><span class="thintext" data-typer-targets='is a digital designer, loves creating with code, is an open-source samurai,'></span></div>
+    <div id="downarrow">⌄</div>
+		<div id="sphereCanvas">
+		</div>
+  </div>
+
+
+		<div class="section">
+  
+      <div id="categories"> tech <span class="pink">///</span> ux <span class="pink">///</span> visual </div>
+    <div id="workcontainer">
+    <div id="workpiece">
+    </div>    
+    <div id="workpiece">
+    </div>    
+    <div id="workpiece">
+    </div>
+    <div id="workpiece">
+    </div>    
+    <div id="workpiece">
+    </div>    
+    <div id="workpiece">
+    </div>
+
+
+    </div>
+		</div>
+
+<div class="section">
+<div id="about">
+  <p class="abouttext">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor elit vel commodo <span class="pink">ultrices</span> . Nulla sollicitudin aliquam augue, eu mattis turpis posuere id. Pellentesque euismod arcu ac sodales feugiat. Donec <span class="pink">dolor velit</span> , hendrerit ac tortor ac, feugiat laoreet tortor. Sed blandit ante sed dolor pulvinar, <span class="pink">non luctus</span> metus fringilla. <br><br>
+  Donec varius feugiat tortor.
+</p>
+<p class="social links">
+Link Link Link Link Link Link 
+</p>
+</div>
+</div>
+
+</div>
+</div>
+</body>
+</html>
