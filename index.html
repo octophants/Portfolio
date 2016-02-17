@@ -6,9 +6,7 @@
   <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
   <script language="javascript" type="text/javascript" src="scripts/p5.js"></script>
   <script language="javascript" type="text/javascript" src="scripts/sketch2.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script language="javascript" type="text/javascript" src="scripts/typer.js"></script>
- 
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <link rel="stylesheet" type="text/css" href="scripts/jquery.fullPage.css" />
   <script type="text/javascript" src="scripts/jquery.fullPage.js"></script>
   <script type="text/javascript">
@@ -31,10 +29,10 @@
     src: url(fonts/SlimJoe.otf);
 }
 
-@font-face {
+/*@font-face {
     font-family: LeagueSpartan;
     src: url(fonts/LeagueSpartan-Bold.otf);
-}
+}*/
 
   body{
   	padding: 0;
@@ -42,7 +40,7 @@
   	width: 100%;
   	background-color: #141414;
   	cursor: crosshair;
-    font-family: 'LeagueSpartan', Arial, sans-serif;
+    font-family: 'Roboto Mono', Arial, sans-serif;
   }
 
 ::-moz-selection { /* Code for Firefox */
@@ -64,8 +62,9 @@
   	width: 100%;
   	height: 100vh;
   	text-align: center;
-  	background-color: rgb(204,70,200);
+  	background-color: #141414;
     z-index: 0;
+    opacity: 0.7;
   }
 
   #splashtext{
@@ -91,11 +90,11 @@
 
 a.navlinks{
 color: #ffffff;
-opacity: 0.7;
+opacity: 0.8;
 font-family: 'Roboto Mono', Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 4px;
-  font-size: 16px;
+  font-size: 14px;
   text-decoration: none;
   transition: all 0.1s ease;
 }
@@ -121,7 +120,7 @@ a.navlinks:active{
   font-family: 'Roboto Mono', Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 4px;
-  font-size: 16px;
+  
 }
 
 .worktext{
@@ -157,11 +156,11 @@ a.navlinks:active{
   width: 100%;
   font-family: 'SlimJoe', Arial, sans-serif;
   text-align: center;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 5px;
   color: #ffffff;
-  padding-top: 5px;
-  padding-bottom: 20px;
+  padding-top: 3vh;
+  padding-bottom: 5vh;
 }
 
 .categorieslinks{
@@ -191,11 +190,11 @@ transition: all 0.1s ease;
 }
 
 #workpiece{
-  width: 30vw;
-  height: 40vh;
+  width: 28vw;
+  height: 35vh;
   background-color: white;
-  margin: 0 auto;
-  margin-right: 2px;
+  margin: 0.5vw auto;
+  margin-right: 0.5vw;
   -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
   filter: grayscale(100%);
   display:inline-block;
@@ -203,7 +202,8 @@ transition: all 0.1s ease;
   transition: all 0.3s ease;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid #CC46C8;
+  border: 1px solid #141414;
+  opacity: 1;
 }
 
 .thesis{
@@ -219,10 +219,14 @@ transition: all 0.1s ease;
 .info{
   background-image: url("images/info.gif");
 }
+.aligngame{
+  background-image: url("images/aligngif.gif");
+}
 #workpiece:hover{
   /*box-shadow: 10px 10px 0 rgb(204,70,200);*/
   -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
   filter: grayscale(0%);
+  border: 1px solid #CC46C8;
 
   opacity: 1;
 }
@@ -240,13 +244,68 @@ transition: all 0.1s ease;
   font-family: 'BigJohn', Arial, sans-serif;
   color: rgb(200,200,200);
   font-size: 32px;
-
 }
 
 .abouttext{
   padding-left: 100px;
   padding-right: 100px;
 }
+
+#splasher{
+  width: 100%;
+  font-family: 'BigJohn', Arial, sans-serif;
+  color: rgba(200,200,200,0.7);
+  font-size: 2.5vw;
+  position: absolute;
+  top: 30%;
+  mix-blend-mode: overlay;
+  z-index: 2;
+
+
+}
+
+.splashpara{
+  padding-left: 20vw;
+  padding-right: 15vw;
+   -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 5s; /* Firefox < 16 */
+        -ms-animation: fadein 5s; /* Internet Explorer */
+         -o-animation: fadein 5s; /* Opera < 12.1 */
+            animation: fadein 5s;
+
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
 
 .social{
   font-family: 'SlimJoe', Arial, sans-serif;
@@ -282,9 +341,14 @@ transition: all 0.1s ease;
 
 </div>
 <div id="fullpage">
-	<div class="section main">
-    <div id="splashtext"> Sam Madhu<br><span class="thintext" data-typer-targets='is a digital designer, loves creating with code, is an open-source samurai,'></span></div>
-    <div id="downarrow">⌄</div>
+	<div class="section">
+    
+   <!--  <div id="splashtext"> Sam Madhu<br><span class="thintext" data-typer-targets='is a digital designer, loves creating with code, is an open-source samurai,'></span></div> -->
+   <!--  <div id="downarrow">⌄</div> -->
+<div id="splasher">
+   <p class="splashpara">
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
+</div>
 		<div id="sphereCanvas">
 		</div>
   </div>
@@ -292,18 +356,19 @@ transition: all 0.1s ease;
 
 		<div class="section">
   
-      <div id="categories"> Selected Work / 2014 - 2016</div>
+      <div id="categories"> Selected Work / 2013 - 2016</div>
     <div id="workcontainer">
     <div class="thesis" id="workpiece">
     </div>    
     <div class="currents" id="workpiece">
     </div>    
-    <div id="workpiece">
-    </div>
+     <div id="workpiece">
+    </div>    
     <div class="info" id="workpiece">
     </div>
-    <div id="workpiece">
-    </div>    
+    <div class="aligngame" id="workpiece">
+    </div>
+   
     <div class="matrix" id="workpiece">
     </div>    
     
@@ -311,18 +376,18 @@ transition: all 0.1s ease;
 
     </div>
 		</div>
-
+<!-- 
 <div class="section">
 <div id="about">
   <p class="abouttext">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor elit vel commodo <span class="pink">ultrices</span> . Nulla sollicitudin aliquam augue, eu mattis turpis posuere id. Pellentesque euismod arcu ac sodales feugiat. Donec <span class="pink">dolor velit</span> , hendrerit ac tortor ac, feugiat laoreet tortor. Sed blandit ante sed dolor pulvinar, <span class="pink">non luctus</span> metus fringilla. <br><br>
   Donec varius feugiat tortor.
 </p>
-<p class="social links">
+<p class="social">
 Link Link Link Link Link Link 
 </p>
 </div>
-</div>
+</div> -->
 
 </div>
 </div>
