@@ -17,8 +17,11 @@
 			});
 		});
 
+
+
 $(window).resize(function(){
   location.reload();});
+
 
 	</script>
 
@@ -38,6 +41,7 @@ $(window).resize(function(){
     font-family: LeagueSpartan;
     src: url(fonts/LeagueSpartan-Bold.otf);
 }*/
+
 
 
 
@@ -246,14 +250,13 @@ transition: all 0.1s ease;
 #workcontainer{
   width: 100%;
   text-align: center;
-}
+ }
 
 #workpiece{
   width: 25vw;
   height: 32vh;
   background-color: #242424;
-  margin: 0.5vw auto;
-  margin-right: 0.5vw;
+  margin: 1vw;
   -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
   filter: grayscale(100%);
   display: inline-block;
@@ -265,28 +268,11 @@ transition: all 0.1s ease;
   opacity: 1;
 }
 
-.thesis{
-  background-image: url("images/pink.gif");
-  opacity: 0.9;
-}
-.currents{
-  background-image: url("images/currents.gif");
-}
-.matrix{
-  background-image: url("images/matrix.gif");
-}
-.info{
-  background-image: url("images/info.gif");
-}
-.aligngame{
-  background-image: url("images/aligngif.gif");
-}
 #workpiece:hover{
   /*box-shadow: 10px 10px 0 rgb(204,70,200);*/
   -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
   filter: grayscale(0%);
   border: 1px solid #CC46C8;
-
   opacity: 1;
 }
 
@@ -356,7 +342,8 @@ transition: all 0.1s ease;
   line-height: 20px;
 }
 #workpiece{
-  width: 75vh;
+  width: 85vw;
+  height: 40vh;
 }
 
 }
@@ -376,6 +363,65 @@ transition: all 0.1s ease;
 }
 
 }*/
+
+
+
+.blacktopink{
+}
+
+
+#worktitles{
+  padding-left: 20vw;
+  padding-right: 15vw;
+  line-height: 50px;
+}
+
+.titles{
+  color: rgb(180,180,180);
+  font-size: 40px;
+  font-family: 'BigJohn', Arial, sans-serif;
+      -webkit-filter: blur(10px); /* Chrome, Safari, Opera */
+    filter: blur(10px);
+    transition: all ease 0.3s;
+}
+
+.titles:hover{
+      -webkit-filter: blur(0px); /* Chrome, Safari, Opera */
+    filter: blur(0px);
+
+}
+
+.descriptions{
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
+  color: rgb(204,70,200);
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: all ease 0.2s;
+}
+
+.titles:hover + .descriptions{
+  opacity: 1;
+}
+
+
+#worktitles.thesis{
+  background-image: url("images/pink.gif");
+}
+.currents{
+  background-image: url("images/currents.gif");
+}
+.matrix{
+  background-image: url("images/matrix.gif");
+}
+.info{
+  background-image: url("images/info.gif");
+}
+.aligngame{
+  background-image: url("images/aligngif.gif");
+}
+
   </style>
 </head>
 
@@ -401,7 +447,7 @@ Sam Madhu <span class="pink">designs experiences</span> for a digital generation
 		</div>
   </div>
 
-
+<!-- 
 		<div class="section">
   
       <div id="categories"> Selected Work / 2013 - 2016</div>
@@ -419,11 +465,22 @@ Sam Madhu <span class="pink">designs experiences</span> for a digital generation
    
     <div class="matrix" id="workpiece">
     </div>    
-    
-
-
     </div>
-		</div>
+    </div> -->
+
+ <div class="section">
+  <div id="worktitles">
+  <span class = "titles">Thesis,</span><span class="descriptions"> this is a sentence.</span><br>
+  <span class = "titles">Parasynthesis,</span><span class="descriptions"> this is a sentence.</span><br>
+  <span class = "titles">SkillSwap,</span><span class="descriptions"> this is a sentence.</span><br>
+  <span class = "titles">Pharaohs,</span><span class="descriptions"> this is a sentence.</span><br>
+  <span class = "titles">Align,</span><span class="descriptions"> this is a sentence.</span><br>
+  <span class = "titles">Matrix,</span><span class="descriptions"> this is a sentence.</span><br>
+  <span class = "titles">Octophants,</span><span class="descriptions"> this is a sentence.</span><br>
+  <span class = "titles">Older Work.</span><span class="descriptions"> this is a sentence.</span>
+  </div>
+ </div>
+  
 <!-- 
 <div class="section">
 <div id="about">
