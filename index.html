@@ -212,6 +212,19 @@ function updateWave(path) {
     background-color: rgba(204,70,200,0.99);
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background-color: #141414;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #CC46C8;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff;
+}
+
   #container{
   	width: 100%;
     overflow-y:hidden;
@@ -343,28 +356,28 @@ transition: all 0.5s ease;
 
 
 .bg.thesis{
-  background-image: url("http://lyrikspor.dk/wp-content/uploads/2014/01/rail-line-in-glasgow-at-night-with-light-trails-wide-angle-black-and-white1.jpg");
+  background-image: url('images/thesis.jpg');
 }
 .bg.currents{
-  background-image: url("http://digital-photography-school.com/wp-content/uploads/2007/02/black-and-white-tips.jpg");
+  background-image: url('images/currents.jpg');
 }
 .bg.skillswap{
-  background-image: url("http://lyrikspor.dk/wp-content/uploads/2014/01/rail-line-in-glasgow-at-night-with-light-trails-wide-angle-black-and-white1.jpg");
+  background-image: url('images/octophants.jpg');
 }
 .bg.info{
-  background-image: url("http://digital-photography-school.com/wp-content/uploads/2007/02/black-and-white-tips.jpg");
+  background-image: url('images/info.jpg');
 }
 .bg.aligngame{
-  background-image: url("http://lyrikspor.dk/wp-content/uploads/2014/01/rail-line-in-glasgow-at-night-with-light-trails-wide-angle-black-and-white1.jpg");
+  background-image: url('images/align.jpg');
 }
 .bg.matrix{
-  background-image: url("http://digital-photography-school.com/wp-content/uploads/2007/02/black-and-white-tips.jpg");
+  background-image: url('images/matrix.jpg');
 }
 .bg.octophants{
-  background-image: url("http://lyrikspor.dk/wp-content/uploads/2014/01/rail-line-in-glasgow-at-night-with-light-trails-wide-angle-black-and-white1.jpg");
+  background-image: url('images/octophants.jpg');
 }
 .bg.oldwork{
-  background-image: url("http://digital-photography-school.com/wp-content/uploads/2007/02/black-and-white-tips.jpg");
+  background-image: url('images/matrix.jpg');
 }
 
 
@@ -387,8 +400,8 @@ a.titles{
   color: rgb(204,70,200);
   font-size: 48px;
   font-family: 'BigJohn', Arial, sans-serif;
-      -webkit-filter: blur(10px); /* Chrome, Safari, Opera */
-    filter: blur(10px);
+      -webkit-filter: blur(12px); /* Chrome, Safari, Opera */
+    filter: blur(12px);
     transition: all ease 0.3s;
     opacity: 1;
 }
@@ -421,8 +434,63 @@ canvas{
   height: 100vh;
   padding: 0;
   z-index: 0;
+  background-color: #141414;
+}
+.canny{
+background-color: #CC46C8;
 }
 
+.end{
+  background: #CC46C8; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#CC46C8, #141414); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#CC46C8, #141414); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#CC46C8, #141414);  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#CC46C8, #141414); /* Standard syntax */
+  text-align: center;
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  color: #B0B0B0;
+  font-weight: 100;
+  font-size: 12px;
+  letter-spacing: 3px;
+
+}
+
+img.last{
+  width: 60vw;
+  transition: all ease 0.2s;
+  box-shadow: 0px;
+}
+
+img.last:hover{
+  box-shadow: 15px 15px 0 #0A0A0A;
+}
+
+.credits{
+text-align: center;
+font-family: 'Roboto Mono', Arial, sans-serif;
+color: #C6C6C6;
+font-weight: 100;
+font-size: 12px;
+letter-spacing: 3px;
+}
+
+.creditslinks{
+  text-decoration: none;;
+  color: #C6C6C6;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(200,200,200,0.6);
+  transition: all ease 0.2s;
+}
+
+.creditslinks:hover{
+padding-bottom: 15px;
+border-bottom: 1px solid rgba(204,70,200,1);
+}
+
+.creditslinks:active{
+  background-color: rgb(204,70,200);
+  color: rgb(204,70,200);
+}
 @media only screen and (max-width: 975px) {
 .splashpara { 
     font-size: 24px; 
@@ -456,12 +524,13 @@ canvas{
 
 <div id="splasher">
    <div class="splashpara">
-Sam Madhu <span class="pink">designs experiences</span> for a digital generation. She has worked on projects involving <span class="pink">virtual</span> reality, <span class="pink">UX/UI</span>, <span class="pink">visual</span> language and <span class="pink">data</span> visualization. She is currently based in New York City and will graduate in May 2016 with a BFA in <span class="pink">Design + Technology</span> from <span class="pink">Parsons</span>. 
+Sam Madhu designs <span class="pink">experiences</span> for a <span class="pink">digital</span> generation. She has worked on projects involving <span class="pink">virtual</span> reality, <span class="pink">UX/UI</span>, <span class="pink">visual</span> language and <span class="pink">data</span> visualization. She is currently based in New York City and will graduate in May 2016 with a BFA in <span class="pink">Design + Technology</span> from <span class="pink">Parsons</span>. 
 </div>
 </div>
 		<div id="sphereCanvas">
 		</div>
   </div>
+
 
 
  <div class="section bg">
@@ -480,8 +549,17 @@ Sam Madhu <span class="pink">designs experiences</span> for a digital generation
   </div>
  </div>
  
- <div class="section">
+ <div class="section canny">
  <canvas id="canvas" resize hidpi="off"></canvas>
+</div>
+
+ <div class="section end">
+ <img class="last" src="images/splash.jpg">
+ <p>sam madhu 2016</p>
+</div>
+
+ <div class="section">
+<p class="credits">// this site uses <a class="creditslinks" href="https://www.behance.net/gallery/19484739/big-john-slim-joe-free-font" target="_blank">Big John</a>, <a class="creditslinks" href="https://www.google.com/fonts/specimen/Roboto+Mono" target="_blank">Roboto Mono</a>, <a class="creditslinks" href="http://alvarotrigo.com/fullPage/" target="_blank">fullpage.js</a>, <a class="creditslinks" href="http://p5js.org/" target="_blank">p5.js</a> and <a class="creditslinks" href="http://paperjs.org/" target="_blank">paper.js</a></p>
 </div>
 
 </div>
