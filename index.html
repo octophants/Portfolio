@@ -13,7 +13,7 @@
   <script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-
+        anchors:['firstPage', 'secondPage', 'thirdPage']
 			});
 		});
 
@@ -382,6 +382,7 @@ transition: all 0.5s ease;
 
 
 #worktitles{
+  padding-top: 10vh;
   padding-left: 20vw;
   padding-right: 15vw;
   line-height: 50px;
@@ -472,9 +473,11 @@ color: #C6C6C6;
 font-weight: 100;
 font-size: 12px;
 letter-spacing: 3px;
+width: 100vw;
 }
 
 .creditslinks{
+  line-height: 40px;
   text-decoration: none;;
   color: #C6C6C6;
   padding-bottom: 5px;
@@ -491,9 +494,23 @@ border-bottom: 1px solid rgba(204,70,200,1);
   background-color: rgb(204,70,200);
   color: rgb(204,70,200);
 }
-@media only screen and (max-width: 975px) {
+@media only screen and (max-width: 1050px) {
 .splashpara { 
     font-size: 24px; 
+}
+#worktitles{
+    line-height: 30px;
+  }
+a.titles{
+   -webkit-filter: blur(0px); /* Chrome, Safari, Opera */
+    filter: blur(0px);
+  font-size: 20px;
+  line-height: 1px;
+}
+.descriptions{
+  font-size: 12px;
+  line-height: 1px;
+  opacity: 1;
 }
 }
 
@@ -504,7 +521,20 @@ border-bottom: 1px solid rgba(204,70,200,1);
   .splashpara { 
     font-size: 18px; 
   }
-
+  #worktitles{
+    line-height: 30px;
+  }
+a.titles{
+   -webkit-filter: blur(0px); /* Chrome, Safari, Opera */
+    filter: blur(0px);
+  font-size: 20px;
+  line-height: 1px;
+}
+.descriptions{
+  font-size: 12px;
+  line-height: 1px;
+  opacity: 1;
+}
 }
 
 
@@ -515,8 +545,8 @@ border-bottom: 1px solid rgba(204,70,200,1);
 <div id="container">
 <div id="topbar">
 
-<div class="worktext"><a class="navlinks" href="#workcontainer">work</a></div>
-<div class="contacttext"><a class="navlinks" href="#about">contact</a></div>
+<div class="worktext"><a class="navlinks" href="#secondPage">work</a></div>
+<div class="contacttext"><a class="navlinks" href="#thirdPage">contact</a></div>
 
 </div>
 <div id="fullpage">
