@@ -22,9 +22,162 @@
 $(window).resize(function(){
   location.reload();});
 
+jQuery(function ($) {
+    $('#showpicturetitlethesis').hover(function () {
+        $('.bg').toggleClass('thesis')
+    })
+
+        $('#showpicturetitlecurrents').hover(function () {
+        $('.bg').toggleClass('currents')
+    })
+
+        $('#showpicturetitleskillswap').hover(function () {
+        $('.bg').toggleClass('skillswap')
+    })
+
+        $('#showpicturetitleinfo').hover(function () {
+        $('.bg').toggleClass('info')
+    })
+
+
+        $('#showpicturetitlealign').hover(function () {
+        $('.bg').toggleClass('aligngame')
+    })
+
+        $('#showpicturetitlematrix').hover(function () {
+        $('.bg').toggleClass('matrix')
+    })
+
+        $('#showpicturetitleoctophants').hover(function () {
+        $('.bg').toggleClass('octophants')
+    })
+        $('#showpicturetitleoldwork').hover(function () {
+        $('.bg').toggleClass('oldwork')
+    })
+})
+
 
 	</script>
 
+  <script type="text/javascript" src="scripts/paper-full.js"></script>
+
+<script type="text/paperscript" canvas="canvas">
+        // Code ported to Paper.js from http://the389.com/9/1/
+        // with permission.
+
+       // Code ported to Paper.js from http://the389.com/9/1/
+// with permission.
+
+var values = {
+    friction: 0.8,
+    timeStep: 0.01,
+    amount: 15,
+    mass: 2,
+    count: 0
+};
+values.invMass = 1 / values.mass;
+
+var path, springs;
+var size = view.size * [1.2, 1];
+
+var Spring = function(a, b, strength, restLength) {
+    this.a = a;
+    this.b = b;
+    this.restLength = restLength || 80;
+    this.strength = strength ? strength : 0.55;
+    this.mamb = values.invMass * values.invMass;
+};
+
+Spring.prototype.update = function() {
+    var delta = this.b - this.a;
+    var dist = delta.length;
+    var normDistStrength = (dist - this.restLength) /
+            (dist * this.mamb) * this.strength;
+    delta.y *= normDistStrength * values.invMass * 0.2;
+    if (!this.a.fixed)
+        this.a.y += delta.y;
+    if (!this.b.fixed)
+        this.b.y -= delta.y;
+};
+
+
+function createPath(strength) {
+    var path = new Path({
+    // Fill the path with a gradient of three color stops
+    // that runs between the two points we defined earlier:
+    fillColor: {
+        gradient: {
+            stops: ['rgba(20,20,20)' , 'rgb(204,70,200)']
+        },
+        origin: [size.width/2, 100],
+        destination: [size.width/2, size.height],
+    }
+    });
+    springs = [];
+    for (var i = 0; i <= values.amount; i++) {
+        var segment = path.add(new Point(i / values.amount, 0.5) * size);
+        var point = segment.point;
+        if (i == 0 || i == values.amount)
+            point.y += size.height;
+        point.px = point.x;
+        point.py = point.y;
+        // The first two and last two points are fixed:
+        point.fixed = i < 2 || i > values.amount - 2;
+        if (i > 0) {
+            var spring = new Spring(segment.previous.point, point, strength);
+            springs.push(spring);
+        }
+    }
+    path.position.x -= size.width / 4;
+    return path;
+}
+
+function onResize() {
+    if (path)
+        path.remove();
+    size = view.bounds.size * [2, 1];
+    path = createPath(0.1);
+}
+
+function onMouseMove(event) {
+    var location = path.getNearestLocation(event.point);
+    var segment = location.segment;
+    var point = segment.point;
+
+    if (!point.fixed && location.distance < size.height / 4) {
+        var y = event.point.y;
+        point.y += (y - point.y) / 6;
+        if (segment.previous && !segment.previous.fixed) {
+            var previous = segment.previous.point;
+            previous.y += (y - previous.y) / 24;
+        }
+        if (segment.next && !segment.next.fixed) {
+            var next = segment.next.point;
+            next.y += (y - next.y) / 24;
+        }
+    }
+}
+
+function onFrame(event) {
+    updateWave(path);
+}
+
+function updateWave(path) {
+    var force = 1 - values.friction * values.timeStep * values.timeStep;
+    for (var i = 0, l = path.segments.length; i < l; i++) {
+        var point = path.segments[i].point;
+        var dy = (point.y - point.py) * force;
+        point.py = point.y;
+        point.y = Math.max(point.y + dy, 0);
+    }
+
+    for (var j = 0, l = springs.length; j < l; j++) {
+        springs[j].update();
+    }
+    path.smooth({ type: 'continuous' });
+}
+
+    </script>
   <style> 
 
   @font-face {
@@ -36,12 +189,6 @@ $(window).resize(function(){
     font-family: SlimJoe;
     src: url(fonts/SlimJoe.otf);
 }
-
-/*@font-face {
-    font-family: LeagueSpartan;
-    src: url(fonts/LeagueSpartan-Bold.otf);
-}*/
-
 
 
 
@@ -94,41 +241,6 @@ $(window).resize(function(){
   font-family: 'BigJohn', Arial, sans-serif;
   font-size: 30px;
 }
-/*   -webkit-animation: fadein 5s; 
-       -moz-animation: fadein 5s; 
-        -ms-animation: fadein 5s; 
-         -o-animation: fadein 5s; 
-            animation: fadein 5s;*/
-
-/*
-@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
- Firefox < 16 
-@-moz-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-Safari, Chrome and Opera > 12.1 
-@-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-Internet Explorer 
-@-ms-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-Opera < 12.1 
-@-o-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}*/
   #splashtext{
   width: 100%;
   font-family: 'BigJohn', Arial, sans-serif;
@@ -214,111 +326,101 @@ a.navlinks:active{
   opacity: 0.8;
 }
 
-#categories{
-  width: 100%;
-  font-family: 'SlimJoe', Arial, sans-serif;
-  text-align: center;
-  font-size: 16px;
-  letter-spacing: 12px;
-  color: #ffffff;
-  opacity: 0.6;
-  padding-top: 3vh;
-  padding-bottom: 5vh;
-}
-
-.categorieslinks{
-  font-family: 'Roboto Mono', Arial, sans-serif;
-color: #ffffff;
-text-decoration: none;
-padding-bottom: 5px;
-border-bottom: 0.5px solid #ffffff;
-transition: all 0.1s ease;
-}
-
-.categorieslinks:hover{
-  font-family: 'SlimJoe', Arial, sans-serif;
-  color: rgb(204,70,200);
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgb(204,70,200);
-}
-
-.categorieslinks:active{
-  font-family: 'BigJohn', Arial, sans-serif;
-  color: rgb(204,70,200);
-}
-
-#workcontainer{
-  width: 100%;
-  text-align: center;
- }
-
-#workpiece{
-  width: 25vw;
-  height: 32vh;
-  background-color: #242424;
-  margin: 1vw;
-  -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-  filter: grayscale(100%);
-  display: inline-block;
-  border-radius: 1px;
-  transition: all 0.3s ease;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border: 1px solid #141414;
-  opacity: 1;
-}
-
-#workpiece:hover{
-  /*box-shadow: 10px 10px 0 rgb(204,70,200);*/
-  -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
-  filter: grayscale(0%);
-  border: 1px solid #CC46C8;
-  opacity: 1;
-}
-
 .pink{
   color: rgb(204,70,200);
 }
 
-.black{
-  opacity: 0;
+
+
+.bg{
+width: 100vw;
+height: 100vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: url('images/graybg.jpg');
+transition: all 0.5s ease;
 }
 
-#about{
-  width: 100%;
+
+.bg.thesis{
+  background-image: url("http://lyrikspor.dk/wp-content/uploads/2014/01/rail-line-in-glasgow-at-night-with-light-trails-wide-angle-black-and-white1.jpg");
+}
+.bg.currents{
+  background-image: url("http://digital-photography-school.com/wp-content/uploads/2007/02/black-and-white-tips.jpg");
+}
+.bg.skillswap{
+  background-image: url("http://lyrikspor.dk/wp-content/uploads/2014/01/rail-line-in-glasgow-at-night-with-light-trails-wide-angle-black-and-white1.jpg");
+}
+.bg.info{
+  background-image: url("http://digital-photography-school.com/wp-content/uploads/2007/02/black-and-white-tips.jpg");
+}
+.bg.aligngame{
+  background-image: url("http://lyrikspor.dk/wp-content/uploads/2014/01/rail-line-in-glasgow-at-night-with-light-trails-wide-angle-black-and-white1.jpg");
+}
+.bg.matrix{
+  background-image: url("http://digital-photography-school.com/wp-content/uploads/2007/02/black-and-white-tips.jpg");
+}
+.bg.octophants{
+  background-image: url("http://lyrikspor.dk/wp-content/uploads/2014/01/rail-line-in-glasgow-at-night-with-light-trails-wide-angle-black-and-white1.jpg");
+}
+.bg.oldwork{
+  background-image: url("http://digital-photography-school.com/wp-content/uploads/2007/02/black-and-white-tips.jpg");
+}
+
+
+#worktitles{
+  padding-left: 20vw;
+  padding-right: 15vw;
+  line-height: 50px;
+}
+
+
+.datitlez{
+  float: left;
+  padding: 5px;
+  padding: 10px;
+}
+
+
+a.titles{
+  text-decoration: none;
+  color: rgb(204,70,200);
+  font-size: 48px;
   font-family: 'BigJohn', Arial, sans-serif;
+      -webkit-filter: blur(10px); /* Chrome, Safari, Opera */
+    filter: blur(10px);
+    transition: all ease 0.3s;
+    opacity: 1;
+}
+
+
+
+a.titles:hover{
+    -webkit-filter: blur(0px); /* Chrome, Safari, Opera */
+    filter: blur(0px);
+
+}
+
+.descriptions{
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 18px;
   color: rgb(200,200,200);
-  font-size: 32px;
+  background-color: #141414;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: all ease 0.2s;
 }
 
-.abouttext{
-  padding-left: 100px;
-  padding-right: 100px;
+a.titles:hover + .descriptions{
+  opacity: 1;
 }
 
-
-
-
-
-.social{
-  font-family: 'SlimJoe', Arial, sans-serif;
-  font-size: 24px;
-  padding-left: 100px;
-  padding-right: 100px;
-}
-
-::-webkit-scrollbar {
-    width: 12px;
-}
-::-webkit-scrollbar-track {
-    background-color: #141414;
-}
-::-webkit-scrollbar-thumb {
-    background-color: #CC46C8;
-    border-left: solid 1px #141414;
-}
-::-webkit-scrollbar-thumb:hover {
-    background-color: #ffffff;
+canvas{
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  z-index: 0;
 }
 
 @media only screen and (max-width: 975px) {
@@ -335,92 +437,8 @@ transition: all 0.1s ease;
     font-size: 18px; 
   }
 
-
-#categories{
-  padding-top: 40px;
-  font-size: 12px;
-  line-height: 20px;
-}
-#workpiece{
-  width: 85vw;
-  height: 40vh;
 }
 
-}
-
-/*@media only screen and (max-width: 800px) {
-
-   .splashpara { 
-    font-size: 3vw; 
-  }
-
-#categories{
-  padding-top: 80px;
-  font-size: 12px;
-}
-#workpiece{
-  width: 75vh;
-}
-
-}*/
-
-
-
-.blacktopink{
-}
-
-
-#worktitles{
-  padding-left: 20vw;
-  padding-right: 15vw;
-  line-height: 50px;
-}
-
-.titles{
-  color: rgb(180,180,180);
-  font-size: 40px;
-  font-family: 'BigJohn', Arial, sans-serif;
-      -webkit-filter: blur(10px); /* Chrome, Safari, Opera */
-    filter: blur(10px);
-    transition: all ease 0.3s;
-}
-
-.titles:hover{
-      -webkit-filter: blur(0px); /* Chrome, Safari, Opera */
-    filter: blur(0px);
-
-}
-
-.descriptions{
-  font-family: 'Roboto Mono', Arial, sans-serif;
-  font-weight: 100;
-  font-size: 18px;
-  color: rgb(204,70,200);
-  letter-spacing: 2px;
-  opacity: 0;
-  transition: all ease 0.2s;
-}
-
-.titles:hover + .descriptions{
-  opacity: 1;
-}
-
-
-#worktitles.thesis{
-  background-image: url("images/pink.gif");
-}
-.currents{
-  background-image: url("images/currents.gif");
-}
-.matrix{
-  background-image: url("images/matrix.gif");
-}
-.info{
-  background-image: url("images/info.gif");
-}
-.aligngame{
-  background-image: url("images/aligngif.gif");
-}
 
   </style>
 </head>
@@ -435,9 +453,7 @@ transition: all 0.1s ease;
 </div>
 <div id="fullpage">
 	<div class="section">
-    
-   <!--  <div id="splashtext"> Sam Madhu<br><span class="thintext" data-typer-targets='is a digital designer, loves creating with code, is an open-source samurai,'></span></div> -->
-   <!--  <div id="downarrow">⌄</div> -->
+
 <div id="splasher">
    <div class="splashpara">
 Sam Madhu <span class="pink">designs experiences</span> for a digital generation. She has worked on projects involving <span class="pink">virtual</span> reality, <span class="pink">UX/UI</span>, <span class="pink">visual</span> language and <span class="pink">data</span> visualization. She is currently based in New York City and will graduate in May 2016 with a BFA in <span class="pink">Design + Technology</span> from <span class="pink">Parsons</span>. 
@@ -447,52 +463,26 @@ Sam Madhu <span class="pink">designs experiences</span> for a digital generation
 		</div>
   </div>
 
-<!-- 
-		<div class="section">
-  
-      <div id="categories"> Selected Work / 2013 - 2016</div>
-    <div id="workcontainer">
-    <div class="thesis" id="workpiece">
-    </div>    
-    <div class="currents" id="workpiece">
-    </div>    
-     <div id="workpiece">
-    </div>    
-    <div class="info" id="workpiece">
-    </div>
-    <div class="aligngame" id="workpiece">
-    </div>
-   
-    <div class="matrix" id="workpiece">
-    </div>    
-    </div>
-    </div> -->
 
- <div class="section">
+ <div class="section bg">
   <div id="worktitles">
-  <span class = "titles">Thesis,</span><span class="descriptions"> this is a sentence.</span><br>
-  <span class = "titles">Parasynthesis,</span><span class="descriptions"> this is a sentence.</span><br>
-  <span class = "titles">SkillSwap,</span><span class="descriptions"> this is a sentence.</span><br>
-  <span class = "titles">Pharaohs,</span><span class="descriptions"> this is a sentence.</span><br>
-  <span class = "titles">Align,</span><span class="descriptions"> this is a sentence.</span><br>
-  <span class = "titles">Matrix,</span><span class="descriptions"> this is a sentence.</span><br>
-  <span class = "titles">Octophants,</span><span class="descriptions"> this is a sentence.</span><br>
-  <span class = "titles">Older Work.</span><span class="descriptions"> this is a sentence.</span>
+    <div class="datitlez">
+  <a id="showpicturetitlethesis" class = "titles" href="">Thesis,</a><span class="descriptions"> a transcending virtual reality experience.</span><br>
+  <a id="showpicturetitlecurrents" class = "titles" href="">Parasynthesis,</a><span class="descriptions"> this is a sentence.</span><br>
+  <a id="showpicturetitleskillswap" class = "titles" href="">SkillSwap,</a><span class="descriptions"> this is a sentence.</span><br>
+  <a id="showpicturetitleinfo" class = "titles" href="">Pharaohs,</a><span class="descriptions"> this is a sentence.</span><br>
+  <a id="showpicturetitlealign" class = "titles" href="">Align,</a><span class="descriptions"> this is a sentence.</span><br>
+  <a id="showpicturetitlematrix" class = "titles" href="">Matrix,</a><span class="descriptions"> this is a sentence.</span><br>
+  <a id="showpicturetitleoctophants" class = "titles" href="">Octophants,</a><span class="descriptions"> this is a sentence.</span><br>
+  <a id="showpicturetitleoldwork" class = "titles" href="">Older Work.</a><span class="descriptions"> this is a sentence.</span>
+</div>
+  
   </div>
  </div>
-  
-<!-- 
-<div class="section">
-<div id="about">
-  <p class="abouttext">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor elit vel commodo <span class="pink">ultrices</span> . Nulla sollicitudin aliquam augue, eu mattis turpis posuere id. Pellentesque euismod arcu ac sodales feugiat. Donec <span class="pink">dolor velit</span> , hendrerit ac tortor ac, feugiat laoreet tortor. Sed blandit ante sed dolor pulvinar, <span class="pink">non luctus</span> metus fringilla. <br><br>
-  Donec varius feugiat tortor.
-</p>
-<p class="social">
-Link Link Link Link Link Link 
-</p>
+ 
+ <div class="section">
+ <canvas id="canvas" resize hidpi="off"></canvas>
 </div>
-</div> -->
 
 </div>
 </div>
