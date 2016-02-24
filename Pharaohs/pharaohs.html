@@ -26,13 +26,10 @@
     width: 100%;
   	margin: 0;
   	padding: 0;
-    background-color: #e34438;
+    background-color: #E3424F;
     font-family: 'BigJohn', Arial, sans-serif;
     color: rgba(0,0,0,0.45);
   }
-
-#content{
-}
 
 #topbar{
   position: fixed;
@@ -104,8 +101,8 @@ opacity: 0.8;
 
 
 .emphaempha{
-/*color: #6B211C;
-text-shadow: 2px 2px 0 rgba(255,255,255,0.5);*/
+color: rgba(255, 255, 255, 0.65);
+letter-spacing: 2px;
 }
 
 #wrapper{
@@ -128,12 +125,16 @@ h1{
 }
 
 h2{
-  font-size: 72px;
+  font-size: 80px;
+  letter-spacing: 4px;
+    padding-bottom: 0;
+  margin-bottom: 0;
+
 }
 
-.write{
+.write0{
   font-size: 24px;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 .wrapper2{
@@ -142,29 +143,42 @@ text-align: center;
 
 .spread{
   margin-top: 20px;
-  width: 40vw;
+  width: 75vw;
   text-align: center;
-  box-shadow: 14px 14px 0 rgba(0,0,0,0.65);
+  box-shadow: 14px 14px 0 rgba(0,0,0,0.4);
+  opacity: 0.85;
 }
 
 .sepia{
-  -webkit-filter: sepia(30%); 
-    filter: sepia(30%);
-    box-shadow: 14px 14px 0 rgba(0,0,0,0.65);
-    margin-right: 8vw;
-    width: 35vw;
-    float: right;
-    margin-top: 10vh;
+  -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    box-shadow: 14px 14px 0 rgba(0,0,0,0.4);
+    width: 30vw;
+    float: middle;
+    margin-left: 5vw;
+    margin-right: 4vw;
+    margin-top: 5vh;
 }
 .question{
   text-align: right;
-  padding-top: 8vh;
   float: left;
-  width: 40vw;
-  font-size: 30px;
-  padding-left: 8vw;
+  width: 20vw;
+  font-size: 28px;
   line-height: 40px;
+  padding-left: 8vw;
+  padding-top: 5vh;
 }
+
+.question2{
+  text-align: left;
+  float: right;
+  width: 20vw;
+  font-size: 28px;
+  line-height: 40px;
+  padding-right: 8vw;
+  padding-top: 5vh;
+}
+
 .listwrapper{
   padding-left: 8vw;
   padding-right: 8vw;
@@ -176,12 +190,13 @@ ol{
 }
 li{
   font-size: 24px;
-  line-height: 35px;
+  line-height: 40px;
 }
 
 #lefter{
+text-align: right;
 width: 45vw;
-margin-left: 6vw;
+margin-left: 3vw;
 margin-top: 8vh;
 float: left;
 display: inline-block;
@@ -189,31 +204,59 @@ display: inline-block;
 
 #rightie{
   width: 45vw;
-  margin-top: 8vh;
+  margin-top: 6vh;
+  margin-right: 4vw;
   float: right;
   display: inline-block;
 }
 
 #leftimage{
-margin-left: 6vw;
-margin-top: 8vh;
+margin-left: 3vw;
+margin-top: 6vh;
 float: left;
 display: inline-block;
 }
 
 #righter{
   width: 45vw;
-  margin-left: 6vw;
-  margin-top: 8vh;
+  margin-left: 5vw;
+  margin-top: 6vh;
   float: left;
   display: inline-block;
 }
 
 .displayz1{
-  width: 35vw;
-  border: 1px solid rgba(255,255,255,0.6);
-  opacity: 0.7;
+  margin-top: 6vh;
+  width: 38vw;
+  box-shadow: 14px 14px 0 rgba(0,0,0,0.4);
+  opacity: 0.8;
   margin-left: 3vw;
+}
+
+.displayz2{
+  margin-top: 6vh;
+  width: 38vw;
+  box-shadow: -14px 14px 0 rgba(0,0,0,0.4);
+  opacity: 0.8;
+  margin-left: 3vw;
+}
+
+a.dalinx{
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+}
+
+a.dalinx:hover{
+  color: rgba(255,255,255,0.8);
+}
+
+.write{
+  font-size: 16px;
+  line-height: 25px;
+  text-indent: 20px;
 }
 
   </style>
@@ -231,40 +274,39 @@ display: inline-block;
    <div id="wrapper">
    <div class="leftie">
     <h1>Pharaohs</h1>
-    <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
+    <p class="write0">
+      A static data visualization piece which organizes multiple streams of complex quantitative and qualitative data into separate layers and simultaneously compiles them into one, solid, <span class="emphaempha">comprehensive package</span> of information.
     </p>
    </div>
      </div> 
 	</div>
 	<div class="section">
         <div class="wrapper2">
-  <img class="spread" src="phara_images/spread.svg">
+  <img class="spread" src="phara_images/spreadgif.gif">
   </div>
 </div>
 
   <div class="section bgbg two">
     
    
-    <p class="question">How do you document 3000 years of historical information from an ancient civilization...
-      <br>
-      <br>
-      ...and present it to the public in a visually stimulating and comprehensive manner?</p>
+    <p class="question">How do you <span class="emphaempha">document 3000 years</span> of historical information from an ancient civilization...</p>
     <img class="sepia"src="phara_images/pharazoom.gif">
+      <p class="question2">...and present it to the public in a visually stimulating and <span class="emphaempha">comprehensive</span> manner?</p>
+    
 	
 </div>
 
 <div class="section listwrapper bgbg three">
-  <p style="font-size:24px">I began my process by filing my collected data in an excel sheet, which was used as a reference to sort out saturated information into individual layers – </p>
+  <p style="font-size:18px">I filed my collected data in a <a class="dalinx" href="https://docs.google.com/spreadsheets/d/1sncrOTL-ZOSAGGOShzN5-hTvlBU7af4CYehVE6ZCw6s/edit?usp=sharing" target="_blank">spreadsheet</a> to sort out saturated information into individual layers – </p>
   <ol>
-    <li>Names of all 250 pharaohs.</li>
-    <li>Duration of ruling period.</li>
-    <li>Gender of each ruler.</li>
-    <li>Relationship to predecessor/successor (child, parent, spouse).</li>
-    <li>Burial location of each ruler.</li>
-    <li>Dynasty/Family groupings.</li>
-    <li>Historical time periods.</li>
-    <li>Influence of each dynasty, depending on duration of reign.</li>
+    <li><span class="emphaempha">Names</span> of all 250 pharaohs.</li>
+    <li><span class="emphaempha">Duration</span> of ruling period.</li>
+    <li><span class="emphaempha">Gender</span> of each ruler.</li>
+    <li><span class="emphaempha">Relationship</span> to predecessor/successor (child, parent, spouse).</li>
+    <li><span class="emphaempha">Burial</span> location of each ruler.</li>
+    <li><span class="emphaempha">Dynasty</span>/Family groupings.</li>
+    <li><span class="emphaempha">Historical</span> time periods.</li>
+    <li><span class="emphaempha">Influence</span> of each dynasty, depending on duration of reign.</li>
   </ol>
 </div>
 
@@ -272,9 +314,9 @@ display: inline-block;
 <div class="section">
    <div id="wrapper">
    <div id="lefter">
-    <h2>1. Names</h2>
+    <h2>1.<br>Names</h2>
     <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
+      Of all the known rulers since 3150 BC. They can be as long as Hotepsekhemwy, or as short as Ay.
     </p>
     </div> 
     <div id="rightie">
@@ -289,12 +331,12 @@ display: inline-block;
 <div class="section">
    <div id="wrapper">
     <div id="leftimage">
-    <img class="displayz1" src="phara_images/names.svg">
+    <img class="displayz2" src="phara_images/dates.svg">
   </div>
    <div id="righter">
-    <h2>2. REIGN</h2>
+    <h2>2.<br>REIGN</h2>
     <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
+      The reigning period of each king/queen. Some ruled for fifty years, others sat on the throne for less than a year. The arched lines mark the ruling periods on the time circle, which extends from 3200 BC to 30 BC.
     </p>
     </div> 
     
@@ -308,13 +350,13 @@ display: inline-block;
 <div class="section">
    <div id="wrapper">
    <div id="lefter">
-    <h2>3. GENDER</h2>
+    <h2>3.<br>GENDER</h2>
     <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
+      Most of the pharaohs were unsurprisingly male, but some of the most prominent and powerful rulers (like Hatshepsut and Cleopatra) were queens. Blue dots represent males, while pink represent females.
     </p>
     </div> 
     <div id="rightie">
-    <img class="displayz1" src="phara_images/names.svg">
+    <img class="displayz1" src="phara_images/gender.svg">
   </div>
 
    </div>
@@ -325,91 +367,93 @@ display: inline-block;
 <div class="section">
    <div id="wrapper">
     <div id="leftimage">
-    <img class="displayz1" src="phara_images/names.svg">
+    <img class="displayz2" src="phara_images/relations.svg">
   </div>
    <div id="righter">
-    <h2>4. RELATIONS</h2>
+    <h2>4.<br>RELATIONS</h2>
     <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
-    </p>
-    </div> 
-    
-
-   </div>
-  </div>
-
-
-
-
-<div class="section">
-   <div id="wrapper">
-   <div id="lefter">
-    <h2>5. BURIAL</h2>
-    <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
-    </p>
-    </div> 
-    <div id="rightie">
-    <img class="displayz1" src="phara_images/names.svg">
-  </div>
-
-   </div>
-  </div>
-
-
-<div class="section">
-   <div id="wrapper">
-    <div id="leftimage">
-    <img class="displayz1" src="phara_images/names.svg">
-  </div>
-   <div id="righter">
-    <h2>6. DYNASTY</h2>
-    <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
-    </p>
-    </div> 
-    
-
-   </div>
-  </div>
-
-
-
-<div class="section">
-   <div id="wrapper">
-   <div id="lefter">
-    <h2>7. HISTORY</h2>
-    <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
-    </p>
-    </div> 
-    <div id="rightie">
-    <img class="displayz1" src="phara_images/names.svg">
-  </div>
-
-   </div>
-  </div>
-
-
-<div class="section">
-   <div id="wrapper">
-    <div id="leftimage">
-    <img class="displayz1" src="phara_images/names.svg">
-  </div>
-   <div id="righter">
-    <h2>8. INFLUENCE</h2>
-    <p class="write">
-      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
-    </p>
-    </div> 
-    
-
-   </div>
-  </div>
-
-
-<div class="section">
+      It’s a well known fact that Egyptians were known to be incestuous, marrying their siblings in order to preserve the pure royal bloodline. Circles represent parent-offspring relationships, straight lines show sibling relationships, and the crossed lines show marriages. </p>
       <p class="write">
+      This complicated setup shows that Ptolemy V had three children – Ptolemy VI, Cleopatra II and Ptolemy VIII, and Cleopatra ended up marrying both her brothers.
+    </p>
+    </div> 
+    
+
+   </div>
+  </div>
+
+
+
+
+<div class="section">
+   <div id="wrapper">
+   <div id="lefter">
+    <h2>5.<br>BURIAL</h2>
+    <p class="write">
+      Members of the same family/ dynasty were usually buried in the same tomb locations. The colored dots and lines represent the burial locations of each ruler on the map of present day Egypt.
+    </p>
+    </div> 
+    <div id="rightie">
+    <img class="displayz1" src="phara_images/map.svg">
+  </div>
+
+   </div>
+  </div>
+
+
+<div class="section">
+   <div id="wrapper">
+    <div id="leftimage">
+    <img class="displayz2" src="phara_images/dynasty.svg">
+  </div>
+   <div id="righter">
+    <h2>6.<br>DYNASTY</h2>
+    <p class="write">
+      A dynasty constituted members of a certain bloodline, so all pharaohs of a particular dynasty were related in some way.
+    </p>
+    </div> 
+    
+
+   </div>
+  </div>
+
+
+
+<div class="section">
+   <div id="wrapper">
+   <div id="lefter">
+    <h2>7.<br>HISTORY</h2>
+    <p class="write">
+      The spans of dynasties coincided with certain historical periods, representing changes in the socio-political and cultural atmospheres of the time.
+    </p>
+    </div> 
+    <div id="rightie">
+    <img class="displayz1" src="phara_images/history.svg">
+  </div>
+
+   </div>
+  </div>
+
+
+<div class="section">
+   <div id="wrapper">
+    <div id="leftimage">
+    <img class="displayz2" src="phara_images/rings.svg">
+  </div>
+   <div id="righter">
+    <h2>8.<br>INFLUENCE</h2>
+    <p class="write">
+      The rings show the influence of each family bloodline based on the number of years they were in power. Each ring represents 10 years. The most powerful families are hence shown to hold the largest ring circles.
+    </p>
+    </div> 
+    
+
+   </div>
+  </div>
+
+
+<div class="section">
+      <p class="write0">
       Download the high-res versions.
     </p>
 </div>
