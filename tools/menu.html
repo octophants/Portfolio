@@ -9,18 +9,18 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <link rel="stylesheet" type="text/css" href="scripts/jquery.fullPage.css" />
   <script type="text/javascript" src="scripts/jquery.fullPage.js"></script>
-  		<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-        anchors:['firstPage', 'secondPage', 'thirdPage']
-			});
-		});
-		</script>
+      <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+      });
+    });
+    </script>
   <style>
   body{
-  	margin: 0;
-  	padding: 0;
+    margin: 0;
+    padding: 0;
   }
+
 #topbar{
   position: fixed;
   width: 100%;
@@ -30,46 +30,66 @@
   font-family: 'Roboto Mono', Arial, sans-serif;
   font-weight: 300;
   letter-spacing: 4px;
+  padding-top: 30px;
 }
 
 .prevtext{
   text-align: left;
   float: left;
+  padding-left: 20px;
 }
 
 
 .nexttext{
   text-align: right;
   float: right;
+  padding-right: 20px;
 }
 
 
 .hometext{
   text-align: center;
+}
 
+.navlinks{
+padding: 5px;
+text-decoration: none;
+font-weight: 100;
+font-size: 14px;
+background-color: #000000;
+color: #ffffff;
+opacity: 0.6;
+ -webkit-filter: invert(0%); /* Chrome, Safari, Opera */
+  filter: invert(0%);
+transition: all 0.2s ease;
+}
+
+.navlinks:hover{
+ -webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+  filter: invert100%);
 }
 
   </style>
 
    <body>
-	<div id="container">
-	<div id="topbar">
+  <div id="container">
+  <div id="topbar">
 
-	<div class="prevtext"><a class="navlinks" href="">prev</a></div>
-	<div class="nexttext"><a class="navlinks" href="">next</a></div>
-	<div class="hometext"><a class="navlinks" href="">home</a></div>
+  <div class="prevtext"><a class="navlinks" href="">prev</a></div>
+  <div class="nexttext"><a class="navlinks" href="">next</a></div>
+  <div class="hometext"><a class="navlinks" href="">home</a></div>
 
-	</div>
-	<div id="fullpage">
-	<div class="section">
-	</div>
-	<div class="section">
-	</div>
+  </div>
+  <div id="fullpage">
+  <div class="section">
+  </div>
+  <div class="section">
+  </div>
 
 
-	</div>
+  </div>
 
-	</div>
+  </div>
 
 
 </body>

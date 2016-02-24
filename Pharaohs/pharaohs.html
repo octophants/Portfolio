@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+  <script type="text/javascript" src="jquery.fullPage.js"></script>
+  		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+			});
+		});
+		</script>
+  <style>
+
+    @font-face {
+    font-family: BigJohn;
+    src: url(BIGJOHN.otf);
+}
+
+
+  body{
+    width: 100%;
+  	margin: 0;
+  	padding: 0;
+    background-color: #e34438;
+    font-family: 'BigJohn', Arial, sans-serif;
+    color: rgba(0,0,0,0.45);
+  }
+
+#content{
+}
+
+#topbar{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  color: #ffffff;
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  padding-top: 30px;
+}
+
+.prevtext{
+  text-align: left;
+  float: left;
+  padding-left: 20px;
+}
+
+
+.nexttext{
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+}
+
+
+.hometext{
+  text-align: center;
+}
+
+.navlinks{
+padding: 5px;
+text-decoration: none;
+font-weight: 100;
+font-size: 14px;
+background-color: #000000;
+color: #ffffff;
+opacity: 0.4;
+ -webkit-filter: invert(0%); /* Chrome, Safari, Opera */
+  filter: invert(0%);
+transition: all 0.2s ease;
+}
+
+.navlinks:hover{
+ -webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+  filter: invert100%);
+opacity: 0.8;
+}
+
+.bgbg{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.one{
+  background-image: url('phara_images/bg1.svg');
+}
+
+.two{
+  background-image: url('phara_images/bg2.svg');
+}
+
+.three{
+  background-image: url('phara_images/bg3.svg');
+}
+
+
+
+.emphaempha{
+/*color: #6B211C;
+text-shadow: 2px 2px 0 rgba(255,255,255,0.5);*/
+}
+
+#wrapper{
+width: 100%;
+
+}
+.leftie{
+width: 48%;
+padding-left: 8vw;
+z-index: 1;
+float: left;
+}
+
+
+h1{
+  font-size: 96px;
+  letter-spacing: 8px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.write{
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.wrapper2{
+text-align: center;
+}
+
+.spread{
+  margin-top: 20px;
+  width: 40vw;
+  text-align: center;
+  box-shadow: 14px 14px 0 rgba(0,0,0,0.65);
+}
+
+.sepia{
+  -webkit-filter: sepia(30%); 
+    filter: sepia(30%);
+    box-shadow: 14px 14px 0 rgba(0,0,0,0.65);
+    margin-right: 8vw;
+    width: 35vw;
+    float: right;
+    margin-top: 10vh;
+}
+.question{
+  text-align: right;
+  padding-top: 8vh;
+  float: left;
+  width: 40vw;
+  font-size: 30px;
+  padding-left: 8vw;
+  line-height: 40px;
+}
+.listwrapper{
+  padding-left: 8vw;
+  padding-right: 8vw;
+  padding-top: 5vh;
+}
+
+ol{
+  width: 80vw;
+}
+li{
+  font-size: 24px;
+  line-height: 35px;
+}
+
+#lefter{
+width: 45vw;
+margin-left: 6vw;
+margin-top: 8vh;
+float: left;
+display: inline-block;
+}
+
+#rightie{
+  width: 45vw;
+  margin-top: 8vh;
+  float: right;
+  display: block;
+}
+
+.displayz1{
+  width: 32vw;
+  border: 1px solid rgba(255,255,255,0.6);
+  opacity: 0.7;
+  margin-left: 3vw;
+}
+
+  </style>
+
+   <body>
+	<div id="topbar">
+
+	<div class="prevtext"><a class="navlinks" href="">prev</a></div>
+	<div class="nexttext"><a class="navlinks" href="">next</a></div>
+	<div class="hometext"><a class="navlinks" href="">home</a></div>
+
+	</div>
+	<div id="fullpage">
+	<div class="section bgbg one">
+   <div id="wrapper">
+   <div class="leftie">
+    <h1>Pharaohs</h1>
+    <p class="write">
+      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
+    </p>
+   </div>
+     </div> 
+	</div>
+	<div class="section">
+        <div class="wrapper2">
+  <img class="spread" src="phara_images/spread.svg">
+  </div>
+</div>
+
+  <div class="section bgbg two">
+    
+   
+    <p class="question">How do you document 3000 years of historical information from an ancient civilization...
+      <br>
+      <br>
+      ...and present it to the public in a visually stimulating and comprehensive manner?</p>
+    <img class="sepia"src="phara_images/pharazoom.gif">
+	
+</div>
+
+<div class="section listwrapper bgbg three">
+  <p style="font-size:24px">I began my process by filing my collected data in an excel sheet, which was used as a reference to sort out saturated information into individual layers – </p>
+  <ol>
+    <li>Names of all 250 pharaohs.</li>
+    <li>Duration of ruling period.</li>
+    <li>Gender of each ruler.</li>
+    <li>Relationship to predecessor/successor (child, parent, spouse).</li>
+    <li>Burial location of each ruler.</li>
+    <li>Dynasty/Family groupings.</li>
+    <li>Historical time periods.</li>
+    <li>Influence of each dynasty, depending on duration of reign.</li>
+  </ol>
+</div>
+
+
+<div class="section">
+   <div id="wrapper">
+   <div id="lefter">
+    <h1>1. Names</h1>
+    <p class="write">
+      A static data visualization piece which organizes multiple streams of complex <span class="emphaempha">quantitative and qualitative</span> data into separate layers and simultaneously compiles them into one, solid, comprehensive package of information.
+    </p>
+    </div> 
+    <div id="rightie">
+    <img class="displayz1" src="phara_images/names.svg">
+  </div>
+
+   </div>
+     
+  </div>
+
+
+
+
+
+
+	</div>
+
+
+</body>
+</html>
