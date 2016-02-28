@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Align</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+<script type="text/javascript" src="jquery.fullPage.js"></script>
+  		<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+			});
+		});
+		</script>
+<style>
+@font-face {
+    font-family: BigJohn;
+    src: url(BIGJOHN.otf);
+}
+
+
+  body{
+    width: 100%;
+  	margin: 0;
+  	padding: 0;
+  	background-color: #3099D1;
+  }
+
+::selection {
+    color: #E3424F;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #141414;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #F0F0F0;
+}
+
+
+#topbar{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  color: #ffffff;
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  padding-top: 30px;
+}
+
+.prevtext{
+  text-align: left;
+  float: left;
+  padding-left: 20px;
+}
+
+
+.nexttext{
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+}
+
+
+.hometext{
+  text-align: center;
+}
+
+.navlinks{
+padding: 5px;
+text-decoration: none;
+font-weight: 100;
+font-size: 14px;
+background-color: #000000;
+color: #ffffff;
+opacity: 0.4;
+ -webkit-filter: invert(0%); /* Chrome, Safari, Opera */
+  filter: invert(0%);
+transition: all 0.2s ease;
+}
+
+.navlinks:hover{
+ -webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+  filter: invert100%);
+opacity: 0.8;
+}
+
+.opening{
+	padding-left: 20vw;
+	padding-right: 20vw;
+	background-image: url('align_images/spread1.svg');
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.description{
+	font-family: 'BigJohn', Arial, sans-serif;
+	font-size: 24px;
+	color: rgba(0,0,0,0.8);
+}
+</style>
+
+</head>
+<body>
+<div id="topbar">
+
+	<div class="prevtext"><a class="navlinks" href="">prev</a></div>
+	<div class="nexttext"><a class="navlinks" href="">next</a></div>
+	<div class="hometext"><a class="navlinks" href="">home</a></div>
+
+	</div>
+	<div id="fullpage">
+		<div class="section opening">
+			<h1>ALIGN</h1>
+			<p class="description">
+                
+				Align is an interactive tablet game designed for children with Strabismus, a condition in which the eyes are not properly aligned with each other. Research shows that treatment is most effective if started at a very early stage. Align, hence, serves as a tool for children to improve their eyesight in a creative and entertaining manner. It is inspired by Alv.io.</p>
+		</div>
+		<div class="section">
+		</div>
+	</div>
+<script>
+</script>
+
+</body>
+</html>

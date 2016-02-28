@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Octophants</title>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+  <script type="text/javascript" src="jquery.fullPage.js"></script>
+      <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+      });
+    });
+    </script>
+    
+  <style>
+
+    @font-face {
+    font-family: BigJohn;
+    src: url(BIGJOHN.otf);
+}
+
+
+  body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-family: 'BigJohn', Arial, sans-serif;
+  }
+
+  ::-moz-selection { /* Code for Firefox */
+    color: #ffffff;
+    background-color: #000000;
+}
+
+::selection {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #141414;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #F0F0F0;
+}
+
+
+#topbar{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  padding-top: 30px;
+}
+
+.prevtext{
+  text-align: left;
+  float: left;
+  padding-left: 20px;
+}
+
+
+.nexttext{
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+}
+
+
+.hometext{
+  text-align: center;
+}
+
+.navlinks{
+padding: 5px;
+text-decoration: none;
+font-weight: 100;
+font-size: 14px;
+background-color: #000000;
+color: #ffffff;
+ -webkit-filter: invert(0%); /* Chrome, Safari, Opera */
+  filter: invert(0%);
+transition: all 0.2s ease;
+}
+
+.navlinks:hover{
+ -webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+  filter: invert100%);
+}
+
+.section{
+      -webkit-box-shadow:inset 0px 0px 0px 15px #000000;
+    -moz-box-shadow:inset 0px 0px 0px 15px #000000;
+    box-shadow:inset 0px 0px 0px 15px #000000;
+}
+
+.medusa{
+  background-image: url('tentacles/medusa.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pinkellies{
+  background-image: url('tentacles/pinkelephants.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.desert{
+  background-image: url('tentacles/desertoctophant.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.salad{
+  background-image: url('tentacles/salad.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+.mother{
+  background-image: url('tentacles/mother.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.legs{
+  background-image: url('tentacles/legs.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+
+p{
+  font-family: 'BigJohn', Arial, sans-serif;
+  font-size: 24px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+
+@media only screen and (max-width: 900px) {
+p{
+  font-size: 14px;
+}
+
+}
+
+  </style>
+
+   <body>
+  <div id="topbar">
+
+  <div class="prevtext"><a class="navlinks" href="">prev</a></div>
+  <div class="nexttext"><a class="navlinks" href="">next</a></div>
+  <div class="hometext"><a class="navlinks" href="">home</a></div>
+
+  </div>
+  <div id="fullpage">
+    <div class="section">
+      <p>
+My obsession with tentacles began three years ago, after a sleep-deprived night of working at the AMT Lab in Parsons. I was drowning in an ocean of work which wasn't particularly interesting, when I suddenly realized that I really wanted to draw some tentacles. Soon, I began seeing tentacles everywhere. I walked into my apartment and all I could see were tentacles – all over the walls, twisting down the stairs into the basement, slithering out from under the couch. The name 'Octophants' arose from a combination of tentacles and elephant trunks, which is a recurring theme in my work. I now spend my days in quiet contemplation of tentacles and their existence in my life. I don't think they will ever leave me, but at least I can keep making cool art.
+      </p>  
+      </div>
+      <div class="section medusa">
+      </div>
+      <div class="section pinkellies">
+      </div>
+       <div class="section legs">
+      </div>
+      <div class="section desert">
+      </div>
+      <div class="section salad">
+      </div>
+      <div class="section mother">
+      </div>
+     
+    
+</div>
+
+
+</body>
+</html>
