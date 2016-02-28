@@ -25,11 +25,11 @@
     width: 100%;
   	margin: 0;
   	padding: 0;
-  	background-color: #3099D1;
+  	background-color: #3DA2D4;
   }
 
 ::selection {
-    color: #E3424F;
+    color: #237BD9;
     background-color: #000000;
 }
 
@@ -102,11 +102,122 @@ opacity: 0.8;
 	background-repeat: no-repeat;
 }
 
+.waves{
+  padding-left: 5vw;
+  padding-right: 5vw;
+  background-image: url('align_images/spread2.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
 .description{
+  padding: 40px;
 	font-family: 'BigJohn', Arial, sans-serif;
 	font-size: 24px;
-	color: rgba(0,0,0,0.8);
+	color: rgba(0,0,0,0.7);
+  background-color: rgba(255,255,255,0.7);
+  border: 5px solid rgba(0,0,0,0.7);
 }
+
+.emphasis{
+color: #3DA2D4;
+}
+
+.links1{
+  color: #0080FF;
+}
+
+.links1:hover{
+  color: #FFD754;
+}
+
+p{
+margin: 0;
+}
+
+h1{
+  font-family: 'BigJohn', Arial, sans-serif;
+  text-align: center;
+  color: #0080FF;
+  opacity: 0.8;
+  font-size: 96px;
+  letter-spacing: 10x;
+  margin-bottom: 20px;
+}
+
+#leftie{
+width: 42vw;
+float: left;
+display: inline-block;
+}
+
+#rightie{
+  width: 42vw;
+  float: right;
+  display: inline-block;
+}
+
+.shiftup{
+  margin-top: -15vh;
+}
+
+.description2{
+  padding: 40px;
+  font-family: 'BigJohn', Arial, sans-serif;
+  font-size: 24px;
+  color: rgba(255,255,255,0.75);
+}
+
+.description3{
+  padding-top: 30vh;
+  font-family: 'BigJohn', Arial, sans-serif;
+  font-size: 36px;
+  color: rgba(255,255,255,0.75);
+}
+
+.description4{
+  text-align: right;
+  padding-top: 40vh;
+  font-family: 'BigJohn', Arial, sans-serif;
+  font-size: 36px;
+  color: rgba(255,255,255,0.75);
+}
+
+.descriptionA{
+  text-align: left;
+  padding-top: 10vh;
+  font-family: 'BigJohn', Arial, sans-serif;
+  font-size: 30px;
+  color: rgba(255,255,255,0.75);
+}
+
+.descriptionB{
+  text-align: right;
+  padding-top: 20vh;
+  font-family: 'BigJohn', Arial, sans-serif;
+  font-size: 30px;
+  color: rgba(255,255,255,0.75);
+}
+
+.emphasis2{
+  color: #FFD754;
+}
+
+.placeimgs{
+  width: 45vw;
+}
+.placeimgs2{
+  width: 45vw;
+  padding-top: 10vh;
+}
+
+.thumbs{
+  width: 27vw;
+  margin: 1vw;
+  display: inline-block;
+}
+
 </style>
 
 </head>
@@ -123,10 +234,96 @@ opacity: 0.8;
 			<h1>ALIGN</h1>
 			<p class="description">
                 
-				Align is an interactive tablet game designed for children with Strabismus, a condition in which the eyes are not properly aligned with each other. Research shows that treatment is most effective if started at a very early stage. Align, hence, serves as a tool for children to improve their eyesight in a creative and entertaining manner. It is inspired by Alv.io.</p>
+				Align is an interactive tablet game designed for children with <span class="emphasis">Strabismus</span>, a condition in which the <span class="emphasis">eyes are not properly aligned</span> with each other. Research shows that treatment is most <span class="emphasis">effective</span> if started at a very <span class="emphasis">early</span> stage. Align, hence, serves as a tool for children to improve their eyesight in a creative and entertaining manner. It is inspired by <a class="links1" href="http://alv.io/" target="_blank">Alv.io</a>.</p>
 		</div>
-		<div class="section">
+		<div class="section waves">
+      <p class="description2">
+        Align tackles Strabismus in such a way that the player <span class="emphasis2">exercises their affected eye</span>. The app is meant to be used along with an <span class="emphasis2">eyepatch</span> that blocks the player's stronger eye. The eyepatch complements the <span class="emphasis2">pirate theme</span> of the game and makes eye exercises fun and interactive for children rather than clinical and mundane. Children can play this game without feeling conscious or <span class="emphasis2">embarrassed</span> of wearing an eyepatch. Moreover, they don't have to bother about practicing <span class="emphasis2">boring</span> exercises at an ophthalmologist's clinic.
+      </p>
 		</div>
+
+    <div class="section waves">
+      <div id="leftie">
+     <img class="placeimgs" src="align_images/ship.svg">
+    </div>
+    <div id="rightie">
+       <p class="description3">
+       In the game, you are the captain of a <span class="emphasis2">ghost pirate</span> ship.
+      </p>
+    </div>
+    </div>
+
+    <div class="section waves">
+      <div id="leftie">
+          <p class="description4"> 
+          You keep getting attacked by the treacherous <span class="emphasis2">Kraken</span>, so you have to shoot it with <span class="emphasis2">cannon balls</span>.
+        </p>
+    </div>
+    <div id="rightie">
+       <p class="description3">
+        <img class="placeimgs shiftup" src="align_images/kraken1.svg">
+      </p>
+    </div>
+    </div>
+
+
+
+    <div class="section waves">
+      <div id="leftie">
+     <img class="placeimgs2" src="align_images/aligngifplay.gif">
+    </div>
+    <div id="rightie">
+       <p class="descriptionA">
+       Here’s a mockup of the gameplay in Processing. The player has to focus on targets with their uncovered affected eye, thereby exercising and strengthening their eye muscles.
+      </p>
+    </div>
+    </div>
+
+    <div class="section waves">
+      <img class="thumbs" src="align_images/aligngif1.gif"><img class="thumbs" src="align_images/aligngif2.gif"><img class="thumbs" src="align_images/aligngif3.gif"><img class="thumbs" src="align_images/aligngif4.gif"><img class="thumbs" src="align_images/aligngif5.gif"><img class="thumbs" src="align_images/alignwin.png">
+    </div>
+
+
+    <div class="section waves">
+      <div id="leftie">
+          <p class="description4"> 
+         defeating the kraken results in earning <span class="emphasis2">'gold'</span>. . .
+        </p>
+    </div>
+    <div id="rightie">
+       <p class="description3">
+        <img class="placeimgs shiftup" src="align_images/kraken2.svg">
+      </p>
+    </div>
+    </div>
+
+     <div class="section waves">
+      <div id="leftie">
+     <img class="placeimgs2" src="align_images/aligngifshop.gif">
+    </div>
+    <div id="rightie">
+       <p class="description3">
+       . . .which can be spent in the game’s <span class="emphasis2">shop</span> to <span class="emphasis2">buy</span> items. 
+      </p>
+    </div>
+    </div>
+
+
+    <div class="section waves">
+      <div id="leftie">
+          <p class="descriptionB"> 
+         Align's in-game economy encourages the player to earn gold by <span class="emphasis2">playing more</span> so that they can purchase upgrades.
+The player benefits from <span class="emphasis2">practicing eye exercises</span> for longer periods, since they end up wanting to play more.
+
+
+        </p>
+    </div>
+    <div id="rightie">
+       <p class="description3">
+        <img class="placeimgs shiftup" src="align_images/alignflow1.gif">
+      </p>
+    </div>
+    </div>
 	</div>
 <script>
 </script>
