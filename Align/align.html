@@ -112,24 +112,25 @@ opacity: 0.8;
 }
 
 .description{
+  margin-top: 10vh;
   padding: 40px;
 	font-family: 'BigJohn', Arial, sans-serif;
 	font-size: 24px;
-	color: rgba(0,0,0,0.7);
-  background-color: rgba(255,255,255,0.7);
-  border: 5px solid rgba(0,0,0,0.7);
+  line-height: 30px;
+	color: rgba(255,255,255,0.75);
+
 }
 
 .emphasis{
-color: #3DA2D4;
+color: #FFD754;
 }
 
 .links1{
-  color: #0080FF;
+  color: #FFD754;
 }
 
 .links1:hover{
-  color: #FFD754;
+  color: #E846C9;
 }
 
 p{
@@ -139,11 +140,11 @@ margin: 0;
 h1{
   font-family: 'BigJohn', Arial, sans-serif;
   text-align: center;
-  color: #0080FF;
-  opacity: 0.8;
-  font-size: 96px;
-  letter-spacing: 10x;
-  margin-bottom: 20px;
+  color: #FFD754;
+  opacity: 0.85;
+  font-size: 8vw;
+  padding: 30px;
+  letter-spacing: 20px;
 }
 
 #leftie{
@@ -162,10 +163,17 @@ display: inline-block;
   margin-top: -15vh;
 }
 
+.shiftdown{
+  margin-top: 10vh;
+}
+
+
 .description2{
+  margin-top: 15vh;
   padding: 40px;
   font-family: 'BigJohn', Arial, sans-serif;
-  font-size: 24px;
+  font-size: 18px;
+  line-height: 27px;
   color: rgba(255,255,255,0.75);
 }
 
@@ -212,10 +220,25 @@ display: inline-block;
   padding-top: 10vh;
 }
 
+#thumbcontainer{
+padding-top: 20px;
+}
+
 .thumbs{
   width: 27vw;
   margin: 1vw;
   display: inline-block;
+}
+
+.last{
+  text-align: center;
+  font-family: 'BigJohn', Arial, sans-serif;
+  font-size: 24px;
+  color: rgba(255,255,255,0.75);
+}
+
+.lastimg{
+  width: 50vw;
 }
 
 </style>
@@ -232,15 +255,37 @@ display: inline-block;
 	<div id="fullpage">
 		<div class="section opening">
 			<h1>ALIGN</h1>
-			<p class="description">
-                
-				Align is an interactive tablet game designed for children with <span class="emphasis">Strabismus</span>, a condition in which the <span class="emphasis">eyes are not properly aligned</span> with each other. Research shows that treatment is most <span class="emphasis">effective</span> if started at a very <span class="emphasis">early</span> stage. Align, hence, serves as a tool for children to improve their eyesight in a creative and entertaining manner. It is inspired by <a class="links1" href="http://alv.io/" target="_blank">Alv.io</a>.</p>
 		</div>
+
+    <div class="section waves">
+      <div id="leftie">
+     <img class="placeimgs" src="align_images/intropic.svg">
+    </div>
+    <div id="rightie">
+      <p class="description">
+        Align is an interactive tablet game designed for children with <span class="emphasis">Strabismus</span>, a condition in which the <span class="emphasis">eyes are not properly aligned</span> with each other. Research shows that treatment is most <span class="emphasis">effective</span> if started at a very <span class="emphasis">early</span> stage. Align, hence, serves as a tool for children to improve their eyesight in a creative and entertaining manner. It is inspired by <a class="links1" href="http://alv.io/" target="_blank">Alv.io</a>.</p>
+    </div>
+    </div>
+
+
 		<div class="section waves">
+      <div id="leftie">
       <p class="description2">
         Align tackles Strabismus in such a way that the player <span class="emphasis2">exercises their affected eye</span>. The app is meant to be used along with an <span class="emphasis2">eyepatch</span> that blocks the player's stronger eye. The eyepatch complements the <span class="emphasis2">pirate theme</span> of the game and makes eye exercises fun and interactive for children rather than clinical and mundane. Children can play this game without feeling conscious or <span class="emphasis2">embarrassed</span> of wearing an eyepatch. Moreover, they don't have to bother about practicing <span class="emphasis2">boring</span> exercises at an ophthalmologist's clinic.
       </p>
+      </div>
+      <div id="rightie">
+        <img class="placeimgs shiftdown" src="align_images/alignipad.png">
+      </div>
 		</div>
+
+
+   <div class="section waves">
+    <div id="thumbcontainer">
+      <img class="thumbs" src="align_images/alignipad1.png"><img class="thumbs" src="align_images/alignipad2.png"><img class="thumbs" src="align_images/alignipad3.png"><img class="thumbs" src="align_images/alignipad4.png"><img class="thumbs" src="align_images/alignipad5.png"><img class="thumbs" src="align_images/alignipad6.png">
+    </div>
+    </div>
+
 
     <div class="section waves">
       <div id="leftie">
@@ -274,7 +319,7 @@ display: inline-block;
     </div>
     <div id="rightie">
        <p class="descriptionA">
-       Here’s a mockup of the gameplay in Processing. The player has to focus on targets with their uncovered affected eye, thereby exercising and strengthening their eye muscles.
+       Here’s a mockup of the gameplay in Processing. The player has to <span class="emphasis2">focus</span> on targets with their uncovered <span class="emphasis2">affected</span> eye, thereby exercising and <span class="emphasis2">strengthening</span> their eye muscles.
       </p>
     </div>
     </div>
@@ -323,8 +368,16 @@ The player benefits from <span class="emphasis2">practicing eye exercises</span>
         <img class="placeimgs shiftup" src="align_images/alignflow1.gif">
       </p>
     </div>
-    </div>
 	</div>
+
+
+
+  <div class="section waves last">
+  Play the game <a class="links1" href="http://alv.io/" target="_blank">here</a> or test the protoype <a class="links1" href="http://alv.io/" target="_blank">here</a>.
+  <img class="lastimg" src="align_images/alignipadsplash.png">
+  </div>
+
+
 <script>
 </script>
 
