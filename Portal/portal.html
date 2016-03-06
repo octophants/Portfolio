@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portal</title>
+<link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+  <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
+  <script type="text/javascript" src="jquery.fullPage.js"></script>
+      <script type="text/javascript">
+    $(document).ready(function() {
+      $('#fullpage').fullpage({
+      });
+    });
+    </script>
+    
+  <style>
+
+    @font-face {
+    font-family: BigJohn;
+    src: url(BIGJOHN.otf);
+}
+
+
+  body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #C928B6;
+    font-family: 'BigJohn', Arial, sans-serif;
+  }
+
+
+  ::-moz-selection { /* Code for Firefox */
+    color: #C928B6;
+    background-color: #000000;
+}
+
+::selection {
+    color: #C928B6;
+    background-color: #000000;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background-color: #141414;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #F0F0F0;
+}
+
+
+#topbar{
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  z-index: 2;
+  color: #ffffff;
+  font-family: 'Roboto Mono', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 4px;
+  padding-top: 30px;
+}
+
+.prevtext{
+  text-align: left;
+  float: left;
+  padding-left: 20px;
+}
+
+
+.nexttext{
+  text-align: right;
+  float: right;
+  padding-right: 20px;
+}
+
+
+.hometext{
+  text-align: center;
+}
+
+.navlinks{
+padding: 5px;
+text-decoration: none;
+font-weight: 100;
+font-size: 14px;
+background-color: #000000;
+color: #ffffff;
+opacity: 0.4;
+ -webkit-filter: invert(0%); /* Chrome, Safari, Opera */
+  filter: invert(0%);
+transition: all 0.2s ease;
+}
+
+.navlinks:hover{
+ -webkit-filter: invert(100%); /* Chrome, Safari, Opera */
+  filter: invert100%);
+opacity: 0.8;
+}
+
+.opening{
+background-image: url('images/tree.gif');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+text-align: center;
+opacity: 0.8;
+}
+
+.splashtext{
+	opacity: 1;
+	color: rgba(0,0,0,0.8);
+	font-size: 20vw;
+	letter-spacing: 1.5vw;
+	text-align: center;
+	z-index: 1;
+}
+
+.stroke{
+	color: #C928B6;
+	  text-shadow:
+   -2px -2px 0 rgba(255,255,255,0.5), 
+    2px -2px 0 rgba(255,255,255,0.5), 
+    -2px 2px 0 rgba(255,255,255,0.5), 
+     2px 2px 0 rgba(255,255,255,0.5);
+}
+
+
+.about{
+background-image: url('images/bg1.gif');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+opacity: 1;
+font-size: 40px;
+color: rgba(0,0,0,0.7);
+padding-left: 5vw;
+padding-right: 5vw;
+line-height: 50px;
+}
+
+.intro{
+margin-top: -100px;
+}
+
+.empha1{
+color: rgba(255,255,255,0.6);
+/*border-bottom: 5px solid rgba(255,255,255,0.6);*/
+}
+
+.spirryspiral{
+background-image: url('images/tree1.gif');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+text-align: center;
+opacity: 0.7;
+}
+
+.spiral{
+width: 45vw;
+opacity: 1;
+/*  -webkit-filter: invert(100%); 
+    filter: invert(100%);
+*/
+float: right;
+}
+
+</style>
+
+</head>
+<body>
+	<div id="topbar">
+
+	<div class="prevtext"><a class="navlinks" href="">prev</a></div>
+	<div class="nexttext"><a class="navlinks" href="">next</a></div>
+	<div class="hometext"><a class="navlinks" href="">home</a></div>
+
+	</div>
+
+<div id="fullpage">
+
+	<div class="section opening">
+		
+		<span class="splashtext">P<span class="stroke">O</span>RTAL</span>
+	</div>
+
+<div class="section about">
+		<p class="intro">PORTAL is an <span class="empha1">immersive</span> virtual reality piece which uses the aesthetics of <span class="empha1">gameplay</span> to create beautiful, <span class="empha1">liberating</span>, magical experiences.</p>
+	</div>
+
+	<div class="section spirryspiral">
+		<img class="spiral" src="images/spiraltext.svg">
+	</div>
+</div>
+
+</body>
+</html>
