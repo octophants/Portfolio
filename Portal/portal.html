@@ -5,6 +5,7 @@
  <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Portal</title>
 <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900' rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
   <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
   <script type="text/javascript" src="jquery.fullPage.js"></script>
@@ -136,15 +137,16 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 opacity: 1;
-font-size: 40px;
-color: rgba(0,0,0,0.7);
 padding-left: 5vw;
 padding-right: 5vw;
-line-height: 50px;
 }
 
 .intro{
+font-size: 40px;
+color: rgba(0,0,0,0.7);
 margin-top: -100px;
+/*font-family: 'Playfair Display', Arial, sans-serif;
+font-weight: 900;*/
 }
 
 .empha1{
@@ -170,9 +172,96 @@ opacity: 1;
 float: right;
 }
 
+#lefttext{
+  width: 45vw;
+  float: left;
+  padding-left: 5vw;
+  padding-top: 5vh;
+}
+
+#rightimage{
+  width: 45vw;
+  float: right;
+}
+
+#leftimage{
+  width: 50vw;
+  float: left;
+  padding-left: 5vw;
+}
+
+#righttext{
+  width: 40vw;
+  float: right;
+  padding-top: 10vh;
+  padding-right: 5vw;
+  margin-left: -5vw;
+}
+
+
+.writing{
+font-size: 28px;
+color: rgba(0,0,0,0.7);
+}
+
+.imgs1{
+width: 42vw;
+}
+
+.imgs2{
+width: 45vw;
+}
+
+.fancy{
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'Playfair Display', 'BigJohn', Arial, sans-serif;
+  font-weight: 400;
+  color: rgba(255,255,255,0.6);
+}
+
+#daquote{
+  margin: auto;
+  width: 90vw;
+}
+.quote{
+  text-align: center;
+  font-size: 72px;
+  font-family: 'Playfair Display', 'BigJohn', Arial, sans-serif;
+  font-weight: 900;
+  color: rgba(0,0,0,0.7);
+}
+
+.quotecreds{
+  text-align: right;
+  font-size: 21px;
+}
+
+.water{
+background-image: url('images/bg2.gif');
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+font-size: 24px;
+color: rgba(0,0,0,0.8);
+}
+
+.phone{
+  text-align: center;
+  font-size: 21px;
+color: rgba(0,0,0,0.8);
+}
+
+.phones{
+  padding-top: 5vh;
+  width: 70vw;
+  opacity: 0.95;
+  text-align: center;
+}
 </style>
 
 </head>
+
 <body>
 	<div id="topbar">
 
@@ -190,12 +279,54 @@ float: right;
 	</div>
 
 <div class="section about">
-		<p class="intro">PORTAL is an <span class="empha1">immersive</span> virtual reality piece which uses the aesthetics of <span class="empha1">gameplay</span> to create beautiful, <span class="empha1">liberating</span>, magical experiences.</p>
+		<p class="intro">Portal is an <span class="empha1">immersive</span> virtual reality piece which uses the aesthetics of <span class="empha1">gameplay</span> to create beautiful, <span class="empha1">liberating</span>, magical experiences.</p>
 	</div>
 
 	<div class="section spirryspiral">
 		<img class="spiral" src="images/spiraltext.svg">
 	</div>
+
+
+  <div class="section">
+    <div id="lefttext"><p class="writing">
+    Portal was originally inspired by our generation’s <span class="empha1">overwhelming</span> digital presence. </p>
+    <p class="writing">We spend more than half the day with our eyes <span class="empha1">glued</span> to a screen. </p>
+
+<p class="fancy">You check your phone when you wake up.<br> You listen to music or play games on the commute to work.<br> You stare at a computer all day at your job.<br> You finally go home and relax in front of the TV.</p>
+<p class="writing">
+I call it SCREEN CULTURE.
+</p>
+</div>
+    <div id="rightimage"><img class="imgs1" src="images/macspiral.png"></div>
+</div>
+
+  <div class="section">
+    <div id="leftimage"><img class="imgs2" src="images/mactree.png"></div>
+    <div id="righttext"><p class="fancy">Some may consider the screen a prison.<br> Others herald it as an escape.<br> The perception of the screen is completely subjective, but there is no denying that the screen itself is a portal.</p>
+<p class="writing">
+Portal hence exists to serve as a quick ‘vacation’ from the monotony of everyday 'screen life'.
+<br><br> <span class="empha1">It takes you away</span>.</p></div>
+</div>
+
+
+ <div class="section">
+  <div id="daquote">
+  <p class="quote">“The bed keeps you in the slum. The flat screen takes you out.”</p>
+  <p class="quotecreds">– Capheus, <i>'Sense 8'</i>.</p>
+</div>
+</div>
+
+ <div class="section water">
+I don’t consider myself a gamer, but I am drawn to the beautiful aesthetics and environments of certain games like No Man’s Sky, FireWatch and Far Cry 4. I love the experience of just running through these fantastic worlds and looking at all they have to offer, without feeling shackled to the ‘responsibility’ of narrative and gameplay. In short, I don’t really care about beating the game, I just want to be transported to the magical places in which they occur.
+</div>
+
+ <div class="section phone">
+<img class="phones" src="images/phonemocks.png"> <br>
+<span class="phone">Interviews with fellow designers, technologists and gamers revealed similar ideals.<span>
+</div>
+
+
+
 </div>
 
 </body>
