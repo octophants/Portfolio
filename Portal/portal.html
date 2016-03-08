@@ -14,6 +14,81 @@
       $('#fullpage').fullpage({
       });
     });
+
+    jQuery(function ($) {
+    $('#meditative').hover(function () {
+      $('#spiralvr').removeClass('show');
+      $('#red').removeClass('hide');
+      $('#spiralvr').addClass('hide');
+      $('#red').addClass('show');
+      $('.experience').addClass('changebgred');
+    },
+     function(e) {
+      $('#spiralvr').removeClass('hide');
+      $('#red').removeClass('show');
+       $('#spiralvr').addClass('show');
+      $('#red').addClass('hide');
+      $('.experience').removeClass('changebgred');
+    }
+    )
+});
+
+
+    jQuery(function ($) {
+    $('#nostalgic').hover(function () {
+      $('#spiralvr').removeClass('show');
+      $('#orange').removeClass('hide');
+      $('#spiralvr').addClass('hide');
+      $('#orange').addClass('show');
+      $('.experience').addClass('changebgorange');
+    },
+     function(e) {
+      $('#spiralvr').removeClass('hide');
+      $('#orange').removeClass('show');
+       $('#spiralvr').addClass('show');
+      $('#orange').addClass('hide');
+      $('.experience').removeClass('changebgorange');
+    }
+    )
+});
+
+        jQuery(function ($) {
+    $('#ambitious').hover(function () {
+      $('#spiralvr').removeClass('show');
+      $('#green').removeClass('hide');
+      $('#spiralvr').addClass('hide');
+      $('#green').addClass('show');
+      $('.experience').addClass('changebggreen');
+    },
+     function(e) {
+      $('#spiralvr').removeClass('hide');
+      $('#green').removeClass('show');
+       $('#spiralvr').addClass('show');
+      $('#green').addClass('hide');
+      $('.experience').removeClass('changebggreen');
+    }
+    )
+});
+
+        jQuery(function ($) {
+    $('#dreamy').hover(function () {
+      $('#spiralvr').removeClass('show');
+      $('#blue').removeClass('hide');
+      $('#spiralvr').addClass('hide');
+      $('#blue').addClass('show');
+      $('.experience').addClass('changebgdarkblue');
+    },
+     function(e) {
+      $('#spiralvr').removeClass('hide');
+      $('#blue').removeClass('show');
+       $('#spiralvr').addClass('show');
+      $('#blue').addClass('hide');
+      $('.experience').removeClass('changebgdarkblue');
+    }
+    )
+});
+
+
     </script>
     
   <style>
@@ -143,6 +218,7 @@ padding-right: 5vw;
 
 .intro{
 font-size: 40px;
+line-height: 60px;
 color: rgba(0,0,0,0.7);
 margin-top: -100px;
 /*font-family: 'Playfair Display', Arial, sans-serif;
@@ -152,6 +228,62 @@ font-weight: 900;*/
 .empha1{
 color: rgba(255,255,255,0.6);
 /*border-bottom: 5px solid rgba(255,255,255,0.6);*/
+}
+
+.experience{
+  text-align: center;
+  line-height: 15px;
+  font-size: 18px;
+  color: rgba(0,0,0,0.7);
+  transition: all ease 0.2s;
+}
+
+.changebgred{
+background-color: #ed5450;
+}
+
+.changebgorange{
+background-color: #e4932b;
+}
+
+.changebggreen{
+background-color: #3cb773;
+}
+
+.changebgdarkblue{
+background-color: #2130c9;
+}
+
+.experiencelist{
+  display: inline;
+  font-size: 18px;
+  color: rgba(0,0,0,0.8);
+  border-bottom: 2px solid rgba(0,0,0,0.8);
+  margin-left: 30px;
+  margin-right: 30px;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+.experiencelist:hover{
+  color: rgba(255,255,255,0.8);
+  border-bottom: 2px solid rgba(255,255,255,0.8);
+}
+
+
+.vrimgs{
+width: 60vw;
+opacity: 0.9;
+margin: auto;
+}
+
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
 }
 
 .spirryspiral{
@@ -184,6 +316,18 @@ float: right;
   float: right;
 }
 
+#lefttext2{
+  width: 40vw;
+  float: left;
+  padding-left: 5vw;
+  padding-top: 10vh;
+}
+
+#rightimage2{
+  width: 50vw;
+  float: right;
+}
+
 #leftimage{
   width: 50vw;
   float: left;
@@ -200,9 +344,18 @@ float: right;
 
 
 .writing{
+font-family: 'BigJohn', Arial, sans-serif;
 font-size: 28px;
 color: rgba(0,0,0,0.7);
 }
+
+.writing2{
+font-family: 'BigJohn', Arial, sans-serif;
+font-size: 24px;
+color: rgba(0,0,0,0.7);
+line-height: 35px;
+}
+
 
 .imgs1{
 width: 42vw;
@@ -237,18 +390,43 @@ width: 45vw;
   font-size: 21px;
 }
 
+.inspolinx{
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 0.1px;
+  transition: all ease 0.2s;
+}
+
+.inspolinx:hover{
+  color: #000000;
+  border-bottom: 2px solid #000000;
+  padding-bottom: 3px;
+}
+
 .water{
 background-image: url('images/bg2.gif');
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 font-size: 24px;
-color: rgba(0,0,0,0.8);
+color: rgba(0,0,0,0.7);
+padding-left: 10vw;
+padding-right: 10vw;
+line-height: 35px;
+}
+
+.watertext{
+margin-top: -25vh;
 }
 
 .phone{
+  font-family: 'Playfair Display', 'BigJohn', Arial, sans-serif;
+  font-weight: 400;
+  padding-left: 5vw;
+  padding-right: 5vw;
   text-align: center;
-  font-size: 21px;
+  font-size: 16px;
 color: rgba(0,0,0,0.8);
 }
 
@@ -258,6 +436,28 @@ color: rgba(0,0,0,0.8);
   opacity: 0.95;
   text-align: center;
 }
+
+.imgs3{
+width: 48vw;
+opacity: 0.85;
+}
+
+.imgs4{
+width: 48vw;
+opacity: 1;
+}
+
+.end{
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+text-align: left;
+opacity: 0.8;
+font-size: 30px;
+padding-left: 10vw;
+padding-right: 10vw;
+}
+
 </style>
 
 </head>
@@ -282,9 +482,29 @@ color: rgba(0,0,0,0.8);
 		<p class="intro">Portal is an <span class="empha1">immersive</span> virtual reality piece which uses the aesthetics of <span class="empha1">gameplay</span> to create beautiful, <span class="empha1">liberating</span>, magical experiences.</p>
 	</div>
 
-	<div class="section spirryspiral">
+
+<div class="section experience">
+    <br><br><br><br>Enter a portal and emerge in a new world every time. <br><br>
+    <span class="empha1">How are you feeling?</span>
+    <ul>
+      <li id="meditative" class="experiencelist">Meditative</li>
+      <li id="nostalgic" class="experiencelist">Nostalgic</li>
+      <li id="ambitious" class="experiencelist">Ambitious</li>
+      <li id="dreamy" class="experiencelist">Dreamy</li>
+    </ul> 
+
+    <img id="spiralvr" class="vrimgs show" src="images/vrspiral.jpg">
+    <img id="red" class="vrimgs hide" src="images/vrred.jpg">
+    <img id="orange" class="vrimgs hide" src="images/vrorange.jpg">
+    <img id="green" class="vrimgs hide" src="images/vrgreen.jpg">
+    <img id="blue" class="vrimgs hide" src="images/vrblue.jpg">
+
+  </div>
+
+
+<!-- 	<div class="section spirryspiral">
 		<img class="spiral" src="images/spiraltext.svg">
-	</div>
+	</div> -->
 
 
   <div class="section">
@@ -317,14 +537,47 @@ Portal hence exists to serve as a quick ‘vacation’ from the monotony of ever
 </div>
 
  <div class="section water">
-I don’t consider myself a gamer, but I am drawn to the beautiful aesthetics and environments of certain games like No Man’s Sky, FireWatch and Far Cry 4. I love the experience of just running through these fantastic worlds and looking at all they have to offer, without feeling shackled to the ‘responsibility’ of narrative and gameplay. In short, I don’t really care about beating the game, I just want to be transported to the magical places in which they occur.
+<p class="watertext">I don’t consider myself a gamer, but I am drawn to the beautiful aesthetics and environments of certain games like <a class="inspolinx" href="http://www.no-mans-sky.com/" target="_blank">No Man’s Sky</a>, <a class="inspolinx" href="http://www.firewatchgame.com/" target="_blank">FireWatch</a> and <a class="inspolinx" href="http://guides.gamepressure.com/farcry4/guide.asp?ID=28642" target="_blank">Far Cry 4</a>. I love the experience of just <span class="empha1">running</span></span> through these fantastic worlds and looking at all they have to offer, without feeling <span class="empha1">shackled</span> to the ‘responsibility’ of <span class="empha1">narrative</span> and gameplay. In short, I don’t really care about beating the game, I just want to be <span class="empha1">transported</span> to the magical places in which they occur.</p>
 </div>
 
  <div class="section phone">
 <img class="phones" src="images/phonemocks.png"> <br>
-<span class="phone">Interviews with fellow designers, technologists and gamers revealed similar ideals.<span>
+<span class="fancy">Interviews and conversations with fellow designers, technologists and gamers revealed similar ideals.<span>
 </div>
 
+ <div class="section">
+  <div id="lefttext2">
+    <p class="writing2">Portal was born from <span class="empha1">integrating</span> old technology with shiny new gadgets. The application itself was built on <span class="empha1">Unity</span> for mobile usage. It can be exported to iPhones or Android devices and used in conjunction with <span class="empha1">Google Cardboard</span> to create a riveting VR experience.</p> <p class="fancy">This project has two components – it serves as an application and an installation. The Kinect 1414 was used for the installation setup, in order to track people’s body coordinates and shift the environment based on their positions.</p>
+  </div>
+  <div id="rightimage2">
+  <img class="imgs3" src="images/tools.png">
+</div>
+</div>
+
+<div class="section">
+  <div id="leftimage"><img class="imgs4" src="images/tools2.png"></div>
+  <div id="righttext" class="writing2">Portal is all about <span class="empha1">accessibility</span>. This is why it uses Google Cardboard instead of a more expensive option. Moreover, it is a mobile application designed for a <span class="empha1">versatile</span> user. It is compatible for iOS and Android phones, but it can also be used on a desktop. The project will be shown as an immersive <span class="empha1">installation</span> as well simply because it aims to make people feel as if they are <span class="empha1">entering a portal</span>.</div>
+</div>
+
+<div class="section phone">
+  
+  <img class="phones" src="images/floormockup.png"> <br><br>
+  <span class="fancy">Here’s a mockup of the installation, which will be exhibited at the New School on May 17th. <br> The installation uses Phillips Hues, the Kinect, two projectors and ambient sound.<span>
+</div>
+
+<div class="section phone">
+  
+  <img class="phones" src="images/playtest.jpg"> <br><br>
+  <span class="fancy">The initial round of prototyping involved a fun session of play-testing during which participants were invited to engage with the piece. <br> This photo really captures exactly what kind of feeling this project intends to provide. They could very well be having a virtual picnic.<span>
+</div>
+
+
+<div class="section end">
+
+Portal will be exhibited at <span class="empha1">SUPERTRANSPOSITIONS</span>, the BFA <span class="empha1">Design and Technology</span> showcase for 2016. <br>
+Come check it out on May 17th, at the <span class="empha1">New School</span>.
+
+</div>
 
 
 </div>
